@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog Aplikasi — AsliApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo"><span class="capsule-mark"></span> AsliApp</div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+            <a href="katalog.html" class="active"><i class="fa-solid fa-grip"></i> Katalog Aplikasi</a>
+            <a href="katalog.html#kategori"><i class="fa-solid fa-tags"></i> Kategori</a>
+            <a href="index.html#kenapa"><i class="fa-solid fa-shield-halved"></i> Kenapa AsliApp</a>
+            <a href="kontak.html"><i class="fa-solid fa-comment-dots"></i> Hubungi Kami</a>
+        </nav>
+        <div class="sidebar-note">
+            <strong>Butuh bantuan?</strong>
+            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+        </div>
+    </aside>
+
+    <main>
+        <div class="topbar">
+            <button class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="greeting">
+                <p>120+ aplikasi siap pakai</p>
+                <h2>Katalog Aplikasi</h2>
+            </div>
+            <div class="search-pill">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Cari nama aplikasi...">
+            </div>
+        </div>
+
+        <div id="kategori" class="section-head">
+            <div>
+                <h3>Jelajahi kategori</h3>
+                <p>Klik kategori atau ketik nama aplikasi di kolom pencarian.</p>
+            </div>
+        </div>
+        <div class="chip-row">
+            <button class="chip active" data-filter="semua">Semua</button>
+            <button class="chip" data-filter="produktivitas">Produktivitas</button>
+            <button class="chip" data-filter="hiburan">Hiburan &amp; Streaming</button>
+            <button class="chip" data-filter="edit">Edit Foto &amp; Video</button>
+            <button class="chip" data-filter="keamanan">Keamanan &amp; VPN</button>
+            <button class="chip" data-filter="edukasi">Edukasi</button>
+        </div>
+
+        <div class="app-grid" id="appGrid">
+
+            <div class="app-card" data-cat="produktivitas" data-name="NoteFlow Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-note-sticky"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>NoteFlow Pro</h4>
+                <p class="app-desc">Catatan tanpa batas, sinkron semua perangkat.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.8 &middot; 320 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp79.000/bln</div>
+                        <div class="new-price">Rp25.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20NoteFlow%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="TaskPilot Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-mint"><i class="fa-solid fa-list-check"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>TaskPilot Premium</h4>
+                <p class="app-desc">Kelola proyek tim dengan papan tak terbatas.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.7 &middot; 210 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp99.000/bln</div>
+                        <div class="new-price">Rp30.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20TaskPilot%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="ScanMaster Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-cream"><i class="fa-solid fa-file-invoice"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>ScanMaster Pro</h4>
+                <p class="app-desc">Scan dokumen jadi PDF rapi, tanpa watermark.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.6 &middot; 175 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp59.000/bln</div>
+                        <div class="new-price">Rp18.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20ScanMaster%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="StreamMax Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-tv"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>StreamMax Premium</h4>
+                <p class="app-desc">Nonton tanpa iklan, kualitas hingga 4K.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.9 &middot; 540 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp186.000/bln</div>
+                        <div class="new-price">Rp35.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20StreamMax%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="TuneWave Plus">
+                <div class="app-top">
+                    <div class="app-icon bg-sage"><i class="fa-solid fa-music"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>TuneWave Plus</h4>
+                <p class="app-desc">Streaming musik tanpa jeda iklan.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.8 &middot; 410 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp69.000/bln</div>
+                        <div class="new-price">Rp20.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20TuneWave%20Plus" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="WatchHub Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-film"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>WatchHub Pro</h4>
+                <p class="app-desc">Koleksi film dan serial, subtitle lengkap.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.7 &middot; 298 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp99.000/bln</div>
+                        <div class="new-price">Rp26.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20WatchHub%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edit" data-name="MotionCraft Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-cream"><i class="fa-solid fa-clapperboard"></i></div>
+                    <span class="cat-tag">Edit Video</span>
+                </div>
+                <h4>MotionCraft Premium</h4>
+                <p class="app-desc">Efek dan preset animasi tanpa watermark.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.7 &middot; 275 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp129.000/bln</div>
+                        <div class="new-price">Rp28.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20MotionCraft%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edit" data-name="PixelForge Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <span class="cat-tag">Edit Foto</span>
+                </div>
+                <h4>PixelForge Pro</h4>
+                <p class="app-desc">Retouch foto profesional, semua fitur AI terbuka.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.9 &middot; 460 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp149.000/bln</div>
+                        <div class="new-price">Rp32.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20PixelForge%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edit" data-name="SnapEdit Plus">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-crop-simple"></i></div>
+                    <span class="cat-tag">Edit Foto</span>
+                </div>
+                <h4>SnapEdit Plus</h4>
+                <p class="app-desc">Hapus background sekali ketuk, hasil rapi.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.6 &middot; 205 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp89.000/bln</div>
+                        <div class="new-price">Rp21.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20SnapEdit%20Plus" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="keamanan" data-name="ShieldNet VPN Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-mint"><i class="fa-solid fa-lock"></i></div>
+                    <span class="cat-tag">Keamanan</span>
+                </div>
+                <h4>ShieldNet VPN Pro</h4>
+                <p class="app-desc">Koneksi aman, tanpa batas kuota harian.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.6 &middot; 190 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp89.000/bln</div>
+                        <div class="new-price">Rp22.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20ShieldNet%20VPN%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="keamanan" data-name="SafeGuard Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-sage"><i class="fa-solid fa-shield-halved"></i></div>
+                    <span class="cat-tag">Keamanan</span>
+                </div>
+                <h4>SafeGuard Premium</h4>
+                <p class="app-desc">Antivirus ringan, pemindaian real-time.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.5 &middot; 140 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp75.000/bln</div>
+                        <div class="new-price">Rp19.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20SafeGuard%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edukasi" data-name="LinguaLeap Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-language"></i></div>
+                    <span class="cat-tag">Edukasi</span>
+                </div>
+                <h4>LinguaLeap Premium</h4>
+                <p class="app-desc">Semua bahasa terbuka, tanpa jeda latihan.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.8 &middot; 260 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp119.000/bln</div>
+                        <div class="new-price">Rp27.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20LinguaLeap%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edukasi" data-name="MathMentor Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-sage"><i class="fa-solid fa-calculator"></i></div>
+                    <span class="cat-tag">Edukasi</span>
+                </div>
+                <h4>MathMentor Pro</h4>
+                <p class="app-desc">Pembahasan langkah demi langkah, semua topik.</p>
+                <div class="rating"><i class="fa-solid fa-star"></i> 4.7 &middot; 150 pembeli</div>
+                <div class="price-row">
+                    <div class="price-block">
+                        <div class="old-price">Rp99.000/bln</div>
+                        <div class="new-price">Rp24.000</div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20MathMentor%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="empty-state" id="emptyState" style="display:none;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Tidak ada aplikasi yang cocok. Coba kata kunci lain.
+            </div>
+
+        </div>
+
+        <footer>
+            <div>
+                <div class="foot-brand">AsliApp</div>
+                <p>&copy; <span id="year"></span> AsliApp. Semua hak dilindungi.</p>
+            </div>
+            <div class="foot-links">
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#kenapa">Kenapa AsliApp</a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
