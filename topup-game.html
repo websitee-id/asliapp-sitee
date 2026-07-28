@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up Game — AsliApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo"><span class="capsule-mark"></span> AsliApp</div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+            <a href="katalog.html"><i class="fa-solid fa-grip"></i> Katalog Aplikasi</a>
+            <a href="katalog.html#kategori"><i class="fa-solid fa-tags"></i> Kategori</a>
+            <a href="pulsa.html"><i class="fa-solid fa-signal"></i> Isi Pulsa</a>
+            <a href="topup-game.html" class="active"><i class="fa-solid fa-gamepad"></i> Top Up Game</a>
+            <a href="index.html#kenapa"><i class="fa-solid fa-shield-halved"></i> Kenapa AsliApp</a>
+            <a href="kontak.html"><i class="fa-solid fa-comment-dots"></i> Hubungi Kami</a>
+        </nav>
+        <div class="sidebar-note">
+            <strong>Butuh bantuan?</strong>
+            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+        </div>
+    </aside>
+
+    <main>
+        <div class="topbar">
+            <button class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="greeting">
+                <p>Top up diamond, UC, dan voucher game</p>
+                <h2>Top Up Game</h2>
+            </div>
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>1. Pilih game</h3>
+            </div>
+        </div>
+        <div class="game-grid" id="gameGrid">
+            <div class="game-card selected" data-game="Mobile Legends">
+                <i class="fa-solid fa-chess-knight"></i>
+                <span>Mobile Legends</span>
+            </div>
+            <div class="game-card" data-game="Free Fire">
+                <i class="fa-solid fa-fire"></i>
+                <span>Free Fire</span>
+            </div>
+            <div class="game-card" data-game="PUBG Mobile">
+                <i class="fa-solid fa-crosshairs"></i>
+                <span>PUBG Mobile</span>
+            </div>
+            <div class="game-card" data-game="Genshin Impact">
+                <i class="fa-solid fa-wind"></i>
+                <span>Genshin Impact</span>
+            </div>
+            <div class="game-card" data-game="Valorant">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Valorant</span>
+            </div>
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>2. Masukkan ID akun</h3>
+            </div>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 10px;">
+            <div class="form-group" style="max-width: 260px; flex: 1;">
+                <label for="userId">User ID</label>
+                <input type="text" id="userId" class="form-input" placeholder="Contoh: 123456789">
+            </div>
+            <div class="form-group" style="max-width: 200px; flex: 1;" id="serverIdGroup">
+                <label for="serverId">Server ID (jika ada)</label>
+                <input type="text" id="serverId" class="form-input" placeholder="Contoh: 2001">
+            </div>
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>3. Pilih nominal top up</h3>
+            </div>
+        </div>
+        <div class="package-grid" id="packageGrid">
+            <!-- populated by JS based on selected game -->
+        </div>
+
+        <div class="order-summary">
+            <div>
+                <div class="summary-text">Ringkasan pesanan</div>
+                <div class="summary-value" id="summaryText">Pilih game &amp; nominal dulu</div>
+            </div>
+            <a href="#" id="pesanBtn" class="btn btn-primary" style="background: var(--cream); color: var(--ink-900);" disabled>
+                <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </a>
+        </div>
+
+        <footer>
+            <div>
+                <div class="foot-brand">AsliApp</div>
+                <p>&copy; <span id="year"></span> AsliApp. Semua hak dilindungi.</p>
+            </div>
+            <div class="foot-links">
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="katalog.html">Katalog Aplikasi</a>
+                <a href="pulsa.html">Isi Pulsa</a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+    var packages = {
+        'Mobile Legends': [
+            { name: '86 Diamonds', price: 'Rp22.000' },
+            { name: '172 Diamonds', price: 'Rp43.000' },
+            { name: '257 Diamonds', price: 'Rp64.000' },
+            { name: '344 Diamonds', price: 'Rp85.000' },
+            { name: '429 Diamonds', price: 'Rp106.000' },
+            { name: '514 Diamonds', price: 'Rp127.000' },
+            { name: 'Weekly Diamond Pass', price: 'Rp29.000' },
+            { name: 'Twilight Pass', price: 'Rp149.000' }
+        ],
+        'Free Fire': [
+            { name: '70 Diamonds', price: 'Rp10.000' },
+            { name: '140 Diamonds', price: 'Rp20.000' },
+            { name: '355 Diamonds', price: 'Rp48.000' },
+            { name: '720 Diamonds', price: 'Rp95.000' },
+            { name: '1450 Diamonds', price: 'Rp190.000' },
+            { name: 'Member Mingguan', price: 'Rp25.000' },
+            { name: 'Member Bulanan', price: 'Rp115.000' }
+        ],
+        'PUBG Mobile': [
+            { name: '60 UC', price: 'Rp15.000' },
+            { name: '325 UC', price: 'Rp75.000' },
+            { name: '660 UC', price: 'Rp149.000' },
+            { name: '1800 UC', price: 'Rp385.000' },
+            { name: 'Royal Pass', price: 'Rp105.000' }
+        ],
+        'Genshin Impact': [
+            { name: '60 Genesis Crystal', price: 'Rp16.000' },
+            { name: '300 Genesis Crystal', price: 'Rp79.000' },
+            { name: '980 Genesis Crystal', price: 'Rp249.000' },
+            { name: '1980 Genesis Crystal', price: 'Rp479.000' },
+            { name: 'Welkin Moon (30 hari)', price: 'Rp79.000' }
+        ],
+        'Valorant': [
+            { name: '420 VP', price: 'Rp58.000' },
+            { name: '700 VP', price: 'Rp95.000' },
+            { name: '1375 VP', price: 'Rp179.000' },
+            { name: '2400 VP', price: 'Rp299.000' }
+        ]
+    };
+
+    var noServerGames = ['Free Fire', 'PUBG Mobile', 'Valorant'];
+
+    var selectedGame = 'Mobile Legends';
+    var selectedPackage = null;
+    var selectedPrice = null;
+
+    var gameCards = document.querySelectorAll('#gameGrid .game-card');
+    var packageGrid = document.getElementById('packageGrid');
+    var summaryText = document.getElementById('summaryText');
+    var pesanBtn = document.getElementById('pesanBtn');
+    var userIdInput = document.getElementById('userId');
+    var serverIdInput = document.getElementById('serverId');
+    var serverIdGroup = document.getElementById('serverIdGroup');
+
+    function renderPackages() {
+        packageGrid.innerHTML = '';
+        packages[selectedGame].forEach(function (pkg) {
+            var card = document.createElement('div');
+            card.className = 'package-card';
+            card.dataset.name = pkg.name;
+            card.dataset.price = pkg.price;
+            card.innerHTML = '<div class="pkg-name">' + pkg.name + '</div><div class="pkg-price">' + pkg.price + '</div>';
+            card.addEventListener('click', function () {
+                document.querySelectorAll('#packageGrid .package-card').forEach(function (c) { c.classList.remove('selected'); });
+                card.classList.add('selected');
+                selectedPackage = pkg.name;
+                selectedPrice = pkg.price;
+                updateSummary();
+            });
+            packageGrid.appendChild(card);
+        });
+        selectedPackage = null;
+        selectedPrice = null;
+        serverIdGroup.style.display = noServerGames.indexOf(selectedGame) !== -1 ? 'none' : 'block';
+        updateSummary();
+    }
+
+    gameCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            gameCards.forEach(function (c) { c.classList.remove('selected'); });
+            card.classList.add('selected');
+            selectedGame = card.dataset.game;
+            renderPackages();
+        });
+    });
+
+    function updateSummary() {
+        if (selectedPackage) {
+            summaryText.textContent = selectedGame + ' — ' + selectedPackage + ' (' + selectedPrice + ')';
+        } else {
+            summaryText.textContent = 'Pilih nominal dulu';
+        }
+
+        var userId = userIdInput.value.trim();
+        var serverId = serverIdInput.value.trim();
+        var needsServer = noServerGames.indexOf(selectedGame) === -1;
+        var idReady = userId.length > 0 && (!needsServer || serverId.length > 0);
+
+        if (selectedPackage && idReady) {
+            var idLine = needsServer ? (userId + ' (Server: ' + serverId + ')') : userId;
+            var pesan = 'Halo AsliApp, saya mau top up game:%0AGame: ' + encodeURIComponent(selectedGame) +
+                '%0AID Akun: ' + encodeURIComponent(idLine) +
+                '%0ANominal: ' + encodeURIComponent(selectedPackage + ' (' + selectedPrice + ')');
+            pesanBtn.href = 'https://wa.me/6281234567890?text=' + pesan;
+            pesanBtn.removeAttribute('disabled');
+        } else {
+            pesanBtn.href = '#';
+            pesanBtn.setAttribute('disabled', 'disabled');
+        }
+    }
+
+    userIdInput.addEventListener('input', updateSummary);
+    serverIdInput.addEventListener('input', updateSummary);
+
+    renderPackages();
+</script>
+</body>
+</html>
