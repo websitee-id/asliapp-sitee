@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isi Pulsa — AsliApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo"><span class="capsule-mark"></span> AsliApp</div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+            <a href="katalog.html"><i class="fa-solid fa-grip"></i> Katalog Aplikasi</a>
+            <a href="katalog.html#kategori"><i class="fa-solid fa-tags"></i> Kategori</a>
+            <a href="pulsa.html" class="active"><i class="fa-solid fa-signal"></i> Isi Pulsa</a>
+            <a href="topup-game.html"><i class="fa-solid fa-gamepad"></i> Top Up Game</a>
+            <a href="index.html#kenapa"><i class="fa-solid fa-shield-halved"></i> Kenapa AsliApp</a>
+            <a href="kontak.html"><i class="fa-solid fa-comment-dots"></i> Hubungi Kami</a>
+        </nav>
+        <div class="sidebar-note">
+            <strong>Butuh bantuan?</strong>
+            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+        </div>
+    </aside>
+
+    <main>
+        <div class="topbar">
+            <button class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="greeting">
+                <p>Isi ulang pulsa & paket data</p>
+                <h2>Isi Pulsa</h2>
+            </div>
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>1. Pilih provider</h3>
+            </div>
+        </div>
+        <div class="chip-row" id="providerRow">
+            <button class="chip active" data-provider="Telkomsel">Telkomsel</button>
+            <button class="chip" data-provider="Indosat Ooredoo">Indosat Ooredoo</button>
+            <button class="chip" data-provider="XL Axiata">XL Axiata</button>
+            <button class="chip" data-provider="Tri (3)">Tri (3)</button>
+            <button class="chip" data-provider="Smartfren">Smartfren</button>
+            <button class="chip" data-provider="Axis">Axis</button>
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>2. Nomor HP tujuan</h3>
+            </div>
+        </div>
+        <div class="form-group" style="max-width: 380px;">
+            <label for="nomorHp">Masukkan nomor HP (contoh: 081234567890)</label>
+            <input type="tel" id="nomorHp" class="form-input" placeholder="08xx-xxxx-xxxx">
+        </div>
+
+        <div class="section-head">
+            <div>
+                <h3>3. Pilih nominal</h3>
+            </div>
+        </div>
+        <div class="package-grid" id="nominalGrid">
+            <div class="package-card" data-nominal="Rp5.000" data-price="Rp6.500">
+                <div class="pkg-name">Pulsa Rp5.000</div>
+                <div class="pkg-price">Rp6.500</div>
+            </div>
+            <div class="package-card" data-nominal="Rp10.000" data-price="Rp11.500">
+                <div class="pkg-name">Pulsa Rp10.000</div>
+                <div class="pkg-price">Rp11.500</div>
+            </div>
+            <div class="package-card" data-nominal="Rp20.000" data-price="Rp21.500">
+                <div class="pkg-name">Pulsa Rp20.000</div>
+                <div class="pkg-price">Rp21.500</div>
+            </div>
+            <div class="package-card" data-nominal="Rp25.000" data-price="Rp26.500">
+                <div class="pkg-name">Pulsa Rp25.000</div>
+                <div class="pkg-price">Rp26.500</div>
+            </div>
+            <div class="package-card" data-nominal="Rp50.000" data-price="Rp51.500">
+                <div class="pkg-name">Pulsa Rp50.000</div>
+                <div class="pkg-price">Rp51.500</div>
+            </div>
+            <div class="package-card" data-nominal="Rp100.000" data-price="Rp101.500">
+                <div class="pkg-name">Pulsa Rp100.000</div>
+                <div class="pkg-price">Rp101.500</div>
+            </div>
+            <div class="package-card" data-nominal="Paket Data 3GB" data-price="Rp25.000">
+                <div class="pkg-name">Paket Data 3GB</div>
+                <div class="pkg-price">Rp25.000</div>
+            </div>
+            <div class="package-card" data-nominal="Paket Data 10GB" data-price="Rp55.000">
+                <div class="pkg-name">Paket Data 10GB</div>
+                <div class="pkg-price">Rp55.000</div>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <div>
+                <div class="summary-text">Ringkasan pesanan</div>
+                <div class="summary-value" id="summaryText">Pilih provider &amp; nominal dulu</div>
+            </div>
+            <a href="#" id="pesanBtn" class="btn btn-primary" style="background: var(--cream); color: var(--ink-900);" disabled>
+                <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </a>
+        </div>
+
+        <footer>
+            <div>
+                <div class="foot-brand">AsliApp</div>
+                <p>&copy; <span id="year"></span> AsliApp. Semua hak dilindungi.</p>
+            </div>
+            <div class="foot-links">
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="katalog.html">Katalog Aplikasi</a>
+                <a href="topup-game.html">Top Up Game</a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+    var selectedProvider = 'Telkomsel';
+    var selectedNominal = null;
+    var selectedPrice = null;
+
+    var providerChips = document.querySelectorAll('#providerRow .chip');
+    var nominalCards = document.querySelectorAll('#nominalGrid .package-card');
+    var summaryText = document.getElementById('summaryText');
+    var pesanBtn = document.getElementById('pesanBtn');
+    var nomorHpInput = document.getElementById('nomorHp');
+
+    providerChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+            providerChips.forEach(function (c) { c.classList.remove('active'); });
+            chip.classList.add('active');
+            selectedProvider = chip.dataset.provider;
+            updateSummary();
+        });
+    });
+
+    nominalCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            nominalCards.forEach(function (c) { c.classList.remove('selected'); });
+            card.classList.add('selected');
+            selectedNominal = card.dataset.nominal;
+            selectedPrice = card.dataset.price;
+            updateSummary();
+        });
+    });
+
+    function updateSummary() {
+        var nomor = nomorHpInput.value.trim();
+        if (selectedNominal) {
+            summaryText.textContent = selectedProvider + ' — ' + selectedNominal + ' (' + selectedPrice + ')';
+        } else {
+            summaryText.textContent = 'Pilih nominal dulu';
+        }
+
+        if (selectedNominal && nomor.length >= 8) {
+            var pesan = 'Halo AsliApp, saya mau isi pulsa/data:%0AProvider: ' + encodeURIComponent(selectedProvider) +
+                '%0ANominal: ' + encodeURIComponent(selectedNominal) +
+                '%0ANomor HP: ' + encodeURIComponent(nomor);
+            pesanBtn.href = 'https://wa.me/6281234567890?text=' + pesan;
+            pesanBtn.removeAttribute('disabled');
+        } else {
+            pesanBtn.href = '#';
+            pesanBtn.setAttribute('disabled', 'disabled');
+        }
+    }
+
+    nomorHpInput.addEventListener('input', updateSummary);
+</script>
+</body>
+</html>
