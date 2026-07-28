@@ -26,7 +26,7 @@
         </nav>
         <div class="sidebar-note">
             <strong>Butuh bantuan?</strong>
-            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+            Tim kami balas chat WhatsApp rata-rata dalam 20 menit, jam 08.00–22.00 WIB.
         </div>
     </aside>
 
@@ -58,6 +58,18 @@
             <div class="game-card" data-game="PUBG Mobile">
                 <i class="fa-solid fa-crosshairs"></i>
                 <span>PUBG Mobile</span>
+            </div>
+            <div class="game-card" data-game="Honor of Kings">
+                <i class="fa-solid fa-crown"></i>
+                <span>Honor of Kings</span>
+            </div>
+            <div class="game-card" data-game="Clash of Clans">
+                <i class="fa-solid fa-shield-cat"></i>
+                <span>Clash of Clans</span>
+            </div>
+            <div class="game-card" data-game="Clash Royale">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Clash Royale</span>
             </div>
             <div class="game-card" data-game="Genshin Impact">
                 <i class="fa-solid fa-wind"></i>
@@ -122,30 +134,270 @@
 <script>
     var packages = {
         'Mobile Legends': [
-            { name: '86 Diamonds', price: 'Rp22.000' },
-            { name: '172 Diamonds', price: 'Rp43.000' },
-            { name: '257 Diamonds', price: 'Rp64.000' },
-            { name: '344 Diamonds', price: 'Rp85.000' },
-            { name: '429 Diamonds', price: 'Rp106.000' },
-            { name: '514 Diamonds', price: 'Rp127.000' },
-            { name: 'Weekly Diamond Pass', price: 'Rp29.000' },
-            { name: 'Twilight Pass', price: 'Rp149.000' }
+            { name: '3 Diamonds', price: 'Rp1.850' },
+            { name: '5 Diamonds', price: 'Rp2.350' },
+            { name: '10 Diamonds', price: 'Rp3.712' },
+            { name: '11 Diamonds', price: 'Rp4.600' },
+            { name: '14 Diamonds', price: 'Rp6.450' },
+            { name: '15 Diamonds', price: 'Rp5.250' },
+            { name: '17 Diamonds', price: 'Rp5.800' },
+            { name: '18 Diamonds', price: 'Rp5.550' },
+            { name: '19 Diamonds', price: 'Rp6.320' },
+            { name: '20 Diamonds', price: 'Rp6.850' },
+            { name: '22 Diamonds', price: 'Rp7.700' },
+            { name: '25 Diamonds', price: 'Rp8.700' },
+            { name: '30 Diamonds', price: 'Rp10.755' },
+            { name: '33 Diamonds', price: 'Rp10.850' },
+            { name: '36 Diamonds', price: 'Rp11.400' },
+            { name: '42 Diamonds', price: 'Rp13.100' },
+            { name: '45 Diamonds', price: 'Rp14.500' },
+            { name: '46 Diamonds', price: 'Rp14.750' },
+            { name: '54 Diamonds', price: 'Rp16.000' },
+            { name: '56 Diamonds', price: 'Rp16.650' },
+            { name: '60 Diamonds', price: 'Rp18.150' },
+            { name: '64 Diamonds', price: 'Rp19.000' },
+            { name: '66 Diamonds', price: 'Rp19.500' },
+            { name: '70 Diamonds', price: 'Rp20.400' },
+            { name: '74 Diamonds', price: 'Rp20.900' },
+            { name: '75 Diamonds', price: 'Rp22.000' },
+            { name: '80 Diamonds', price: 'Rp23.000' },
+            { name: '85 Diamonds', price: 'Rp23.950' },
+            { name: '90 Diamonds', price: 'Rp25.250' },
+            { name: '92 Diamonds', price: 'Rp28.650' },
+            { name: '98 Diamonds', price: 'Rp28.500' },
+            { name: '100 Diamonds', price: 'Rp28.500' },
+            { name: '110 Diamonds', price: 'Rp30.850' },
+            { name: '116 Diamonds', price: 'Rp32.800' },
+            { name: '128 Diamonds', price: 'Rp35.500' },
+            { name: '129 Diamonds', price: 'Rp35.600' },
+            { name: '140 Diamonds', price: 'Rp39.000' },
+            { name: '144 Diamonds', price: 'Rp39.400' },
+            { name: '148 Diamonds', price: 'Rp40.875' },
+            { name: '153 Diamonds', price: 'Rp42.750' },
+            { name: '170 Diamonds', price: 'Rp45.900' },
+            { name: '172 Diamonds', price: 'Rp47.550' },
+            { name: '176 Diamonds', price: 'Rp48.000' },
+            { name: '182 Diamonds', price: 'Rp50.000' },
+            { name: '185 Diamonds', price: 'Rp50.500' },
+            { name: '194 Diamonds', price: 'Rp53.750' },
+            { name: '200 Diamonds', price: 'Rp55.500' },
+            { name: '222 Diamonds', price: 'Rp61.850' },
+            { name: '240 Diamonds', price: 'Rp69.500' },
+            { name: '258 Diamonds', price: 'Rp70.400' },
+            { name: '277 Diamonds', price: 'Rp75.200' },
+            { name: '282 Diamonds', price: 'Rp76.500' },
+            { name: '296 Diamonds', price: 'Rp79.500' },
+            { name: '300 Diamonds', price: 'Rp81.000' },
+            { name: '305 Diamonds', price: 'Rp83.500' },
+            { name: '350 Diamonds', price: 'Rp96.100' },
+            { name: '366 Diamonds', price: 'Rp99.250' },
+            { name: '370 Diamonds', price: 'Rp100.100' },
+            { name: '384 Diamonds', price: 'Rp103.650' },
+            { name: '408 Diamonds', price: 'Rp111.400' },
+            { name: '429 Diamonds', price: 'Rp114.500' },
+            { name: '514 Diamonds', price: 'Rp138.000' },
+            { name: '518 Diamonds', price: 'Rp139.900' },
+            { name: '568 Diamonds', price: 'Rp154.000' },
+            { name: '600 Diamonds', price: 'Rp157.000' },
+            { name: '642 Diamonds', price: 'Rp166.850' },
+            { name: '702 Diamonds', price: 'Rp182.350' },
+            { name: '706 Diamonds', price: 'Rp183.700' },
+            { name: '716 Diamonds', price: 'Rp186.400' },
+            { name: '750 Diamonds', price: 'Rp194.850' },
+            { name: '760 Diamonds', price: 'Rp197.700' },
+            { name: '790 Diamonds', price: 'Rp208.750' },
+            { name: '878 Diamonds', price: 'Rp225.250' },
+            { name: '963 Diamonds', price: 'Rp251.500' },
+            { name: '966 Diamonds', price: 'Rp254.600' },
+            { name: '1.045 Diamonds', price: 'Rp270.000' },
+            { name: '1.048 Diamonds', price: 'Rp277.000' },
+            { name: '1.050 Diamonds', price: 'Rp266.350' },
+            { name: '1.134 Diamonds', price: 'Rp291.950' },
+            { name: '1.159 Diamonds', price: 'Rp311.550' },
+            { name: '1.220 Diamonds', price: 'Rp315.000' },
+            { name: '1.412 Diamonds', price: 'Rp367.750' },
+            { name: '1.443 Diamonds', price: 'Rp367.750' },
+            { name: '1.506 Diamonds', price: 'Rp400.000' },
+            { name: '1.669 Diamonds', price: 'Rp427.750' },
+            { name: '1.704 Diamonds', price: 'Rp434.750' },
+            { name: '2.010 Diamonds', price: 'Rp490.500' },
+            { name: '2.195 Diamonds', price: 'Rp531.500' },
+            { name: '2.232 Diamonds', price: 'Rp573.000' },
+            { name: '2.350 Diamonds', price: 'Rp578.000' },
+            { name: '2.578 Diamonds', price: 'Rp627.000' },
+            { name: '3.453 Diamonds', price: 'Rp846.500' },
+            { name: '3.738 Diamonds', price: 'Rp924.500' },
+            { name: '4.020 Diamonds', price: 'Rp961.500' },
+            { name: '4.588 Diamonds', price: 'Rp1.142.500' },
+            { name: '4.830 Diamonds', price: 'Rp1.154.000' },
+            { name: '5.398 Diamonds', price: 'Rp1.298.000' },
+            { name: '5.532 Diamonds', price: 'Rp1.338.500' },
+            { name: '6.000 Diamonds', price: 'Rp1.444.000' },
+            { name: '6.800 Diamonds', price: 'Rp1.638.000' },
+            { name: '7.727 Diamonds', price: 'Rp1.858.000' },
+            { name: '8.040 Diamonds', price: 'Rp1.921.000' }
         ],
         'Free Fire': [
-            { name: '70 Diamonds', price: 'Rp10.000' },
-            { name: '140 Diamonds', price: 'Rp20.000' },
-            { name: '355 Diamonds', price: 'Rp48.000' },
-            { name: '720 Diamonds', price: 'Rp95.000' },
-            { name: '1450 Diamonds', price: 'Rp190.000' },
-            { name: 'Member Mingguan', price: 'Rp25.000' },
-            { name: 'Member Bulanan', price: 'Rp115.000' }
+            { name: '5 Diamonds', price: 'Rp1.600' },
+            { name: '10 Diamonds', price: 'Rp2.750' },
+            { name: '12 Diamonds', price: 'Rp3.400' },
+            { name: '15 Diamonds', price: 'Rp4.350' },
+            { name: '20 Diamonds', price: 'Rp5.300' },
+            { name: '25 Diamonds', price: 'Rp6.200' },
+            { name: '30 Diamonds', price: 'Rp8.000' },
+            { name: '40 Diamonds', price: 'Rp8.200' },
+            { name: '50 Diamonds', price: 'Rp9.900' },
+            { name: '55 Diamonds', price: 'Rp10.300' },
+            { name: '60 Diamonds', price: 'Rp10.600' },
+            { name: '70 Diamonds', price: 'Rp11.200' },
+            { name: '75 Diamonds', price: 'Rp12.100' },
+            { name: '80 Diamonds', price: 'Rp13.900' },
+            { name: '90 Diamonds', price: 'Rp15.800' },
+            { name: '95 Diamonds', price: 'Rp15.700' },
+            { name: '100 Diamonds', price: 'Rp17.700' },
+            { name: '120 Diamonds', price: 'Rp18.600' },
+            { name: '130 Diamonds', price: 'Rp19.250' },
+            { name: '140 Diamonds', price: 'Rp20.357' },
+            { name: '145 Diamonds', price: 'Rp21.350' },
+            { name: '150 Diamonds', price: 'Rp23.400' },
+            { name: '160 Diamonds', price: 'Rp25.200' },
+            { name: '170 Diamonds', price: 'Rp25.500' },
+            { name: '180 Diamonds', price: 'Rp26.200' },
+            { name: '190 Diamonds', price: 'Rp27.150' },
+            { name: '200 Diamonds', price: 'Rp29.000' },
+            { name: '210 Diamonds', price: 'Rp29.800' },
+            { name: '250 Diamonds', price: 'Rp38.000' },
+            { name: '260 Diamonds', price: 'Rp37.300' },
+            { name: '280 Diamonds', price: 'Rp40.000' },
+            { name: '300 Diamonds', price: 'Rp42.812' },
+            { name: '350 Diamonds', price: 'Rp50.047' },
+            { name: '355 Diamonds', price: 'Rp50.000' },
+            { name: '360 Diamonds', price: 'Rp50.500' },
+            { name: '375 Diamonds', price: 'Rp55.000' },
+            { name: '400 Diamonds', price: 'Rp57.000' },
+            { name: '405 Diamonds', price: 'Rp57.500' },
+            { name: '420 Diamonds', price: 'Rp61.000' },
+            { name: '425 Diamonds', price: 'Rp59.200' },
+            { name: '475 Diamonds', price: 'Rp65.500' },
+            { name: '495 Diamonds', price: 'Rp68.500' },
+            { name: '500 Diamonds', price: 'Rp69.500' },
+            { name: '510 Diamonds', price: 'Rp74.000' },
+            { name: '512 Diamonds', price: 'Rp71.000' },
+            { name: '515 Diamonds', price: 'Rp72.200' },
+            { name: '520 Diamonds', price: 'Rp71.300' },
+            { name: '545 Diamonds', price: 'Rp77.000' },
+            { name: '565 Diamonds', price: 'Rp78.500' },
+            { name: '600 Diamonds', price: 'Rp85.000' },
+            { name: '635 Diamonds', price: 'Rp87.000' },
+            { name: '645 Diamonds', price: 'Rp92.000' },
+            { name: '655 Diamonds', price: 'Rp89.700' },
+            { name: '700 Diamonds', price: 'Rp97.180' },
+            { name: '720 Diamonds', price: 'Rp100.000' },
+            { name: '725 Diamonds', price: 'Rp97.200' },
+            { name: '740 Diamonds', price: 'Rp101.000' },
+            { name: '770 Diamonds', price: 'Rp105.500' },
+            { name: '790 Diamonds', price: 'Rp108.000' },
+            { name: '800 Diamonds', price: 'Rp111.000' },
+            { name: '860 Diamonds', price: 'Rp115.500' },
+            { name: '925 Diamonds', price: 'Rp121.500' },
+            { name: '930 Diamonds', price: 'Rp125.500' },
+            { name: '1000 Diamonds', price: 'Rp138.000' },
+            { name: '1050 Diamonds', price: 'Rp142.000' },
+            { name: '1060 Diamonds', price: 'Rp144.000' },
+            { name: '1075 Diamonds', price: 'Rp142.700' },
+            { name: '1080 Diamonds', price: 'Rp167.335' },
+            { name: '1200 Diamonds', price: 'Rp160.000' },
+            { name: '1215 Diamonds', price: 'Rp158.500' },
+            { name: '1300 Diamonds', price: 'Rp174.000' },
+            { name: '1440 Diamonds', price: 'Rp191.000' },
+            { name: '1450 Diamonds', price: 'Rp194.000' },
+            { name: '1490 Diamonds', price: 'Rp193.773' },
+            { name: '1510 Diamonds', price: 'Rp195.700' },
+            { name: '1580 Diamonds', price: 'Rp215.000' },
+            { name: '1795 Diamonds', price: 'Rp233.900' },
+            { name: '1800 Diamonds', price: 'Rp232.000' },
+            { name: '1875 Diamonds', price: 'Rp242.211' },
+            { name: '1975 Diamonds', price: 'Rp254.794' },
+            { name: '2000 Diamonds', price: 'Rp265.000' },
+            { name: '2100 Diamonds', price: 'Rp269.000' },
+            { name: '2140 Diamonds', price: 'Rp283.000' },
+            { name: '2180 Diamonds', price: 'Rp298.000' },
+            { name: '2190 Diamonds', price: 'Rp279.000' },
+            { name: '2200 Diamonds', price: 'Rp279.500' },
+            { name: '2210 Diamonds', price: 'Rp282.800' },
+            { name: '2225 Diamonds', price: 'Rp288.500' },
+            { name: '2280 Diamonds', price: 'Rp298.000' },
+            { name: '2355 Diamonds', price: 'Rp304.000' },
+            { name: '2575 Diamonds', price: 'Rp328.100' },
+            { name: '2720 Diamonds', price: 'Rp353.000' },
+            { name: '2750 Diamonds', price: 'Rp350.000' },
+            { name: '3000 Diamonds', price: 'Rp380.000' },
+            { name: '3310 Diamonds', price: 'Rp426.850' },
+            { name: '3640 Diamonds', price: 'Rp461.000' },
+            { name: '3675 Diamonds', price: 'Rp460.500' },
+            { name: '3800 Diamonds', price: 'Rp481.500' },
+            { name: '4000 Diamonds', price: 'Rp508.000' },
+            { name: '4050 Diamonds', price: 'Rp510.000' },
+            { name: '4340 Diamonds', price: 'Rp563.000' },
+            { name: '4450 Diamonds', price: 'Rp563.900' },
+            { name: '4720 Diamonds', price: 'Rp598.000' },
+            { name: '4800 Diamonds', price: 'Rp616.750' },
+            { name: '4850 Diamonds', price: 'Rp623.500' },
+            { name: '5500 Diamonds', price: 'Rp686.000' },
+            { name: '5600 Diamonds', price: 'Rp702.000' },
+            { name: '6480 Diamonds', price: 'Rp830.000' },
+            { name: '6550 Diamonds', price: 'Rp839.000' },
+            { name: '6900 Diamonds', price: 'Rp871.000' },
+            { name: '7290 Diamonds', price: 'Rp933.000' },
+            { name: '7650 Diamonds', price: 'Rp963.000' },
+            { name: '9800 Diamonds', price: 'Rp1.228.000' }
         ],
         'PUBG Mobile': [
-            { name: '60 UC', price: 'Rp15.000' },
-            { name: '325 UC', price: 'Rp75.000' },
-            { name: '660 UC', price: 'Rp149.000' },
-            { name: '1800 UC', price: 'Rp385.000' },
-            { name: 'Royal Pass', price: 'Rp105.000' }
+            { name: 'PUBG Mobile 50 UC', price: 'Rp17.355' },
+            { name: 'PUBG Mobile Indo 60 UC', price: 'Rp18.000' },
+            { name: 'PUBG Mobile 100 UC', price: 'Rp32.000' },
+            { name: 'PUBG Mobile 105 UC', price: 'Rp32.500' },
+            { name: 'PUBG Mobile Indo 300 + 25 UC', price: 'Rp84.500' },
+            { name: 'PUBG Mobile Indo 385 UC', price: 'Rp100.500' },
+            { name: 'PUBG Mobile Indo 480 + 25 UC', price: 'Rp129.952' },
+            { name: 'PUBG Mobile 525 UC', price: 'Rp156.000' },
+            { name: 'PUBG Mobile Indo 600 + 60 UC', price: 'Rp167.000' },
+            { name: 'PUBG Mobile Indo 660 + 60 UC', price: 'Rp178.000' },
+            { name: 'PUBG Mobile 1000 UC', price: 'Rp264.600' },
+            { name: 'PUBG Mobile Indo 1.500 + 300 UC', price: 'Rp413.000' },
+            { name: 'PUBG Mobile Indo 3.000 + 850 UC', price: 'Rp793.000' },
+            { name: 'PUBG Mobile Indo 6.000 + 2.100 UC', price: 'Rp1.803.000' }
+        ],
+        'Honor of Kings': [
+            { name: '16 Tokens', price: 'Rp4.800' },
+            { name: '80 Tokens', price: 'Rp17.500' },
+            { name: '240 Tokens', price: 'Rp46.000' },
+            { name: '400 Tokens', price: 'Rp76.400' },
+            { name: '560 Tokens', price: 'Rp106.500' },
+            { name: '800 Tokens', price: 'Rp149.700' },
+            { name: '1.200 Tokens', price: 'Rp224.000' },
+            { name: '2.400 Tokens', price: 'Rp438.500' },
+            { name: '4.000 Tokens', price: 'Rp751.500' },
+            { name: '8.000 Tokens', price: 'Rp1.454.000' }
+        ],
+        'Clash of Clans': [
+            { name: '80 Gems + 8 Bonus', price: 'Rp16.500' },
+            { name: '500 Gems + 50 Bonus', price: 'Rp72.500' },
+            { name: 'Gold Pass', price: 'Rp98.500' },
+            { name: '1200 Gems + 120 Bonus', price: 'Rp137.000' },
+            { name: '2500 Gems + 250 Bonus', price: 'Rp265.500' },
+            { name: '6500 Gems + 650 Bonus', price: 'Rp641.500' },
+            { name: '14000 Gems + 1400 Bonus', price: 'Rp1.274.000' }
+        ],
+        'Clash Royale': [
+            { name: '80 Gems + 8 Bonus', price: 'Rp16.000' },
+            { name: '500 Gems + 50 Bonus', price: 'Rp73.000' },
+            { name: 'Gold Pass', price: 'Rp84.000' },
+            { name: '1200 Gems + 120 Bonus', price: 'Rp139.000' },
+            { name: 'Diamond Pass', price: 'Rp164.000' },
+            { name: '2500 Gems + 250 Bonus', price: 'Rp267.000' },
+            { name: '6500 Gems + 650 Bonus', price: 'Rp642.000' },
+            { name: '14000 Gems + 1400 Bonus', price: 'Rp1.275.000' }
         ],
         'Genshin Impact': [
             { name: '60 Genesis Crystal', price: 'Rp16.000' },
@@ -162,7 +414,7 @@
         ]
     };
 
-    var noServerGames = ['Free Fire', 'PUBG Mobile', 'Valorant'];
+    var noServerGames = ['Free Fire', 'PUBG Mobile', 'Valorant', 'Honor of Kings', 'Clash of Clans', 'Clash Royale'];
 
     var selectedGame = 'Mobile Legends';
     var selectedPackage = null;
@@ -178,21 +430,23 @@
 
     function renderPackages() {
         packageGrid.innerHTML = '';
-        packages[selectedGame].forEach(function (pkg) {
-            var card = document.createElement('div');
-            card.className = 'package-card';
-            card.dataset.name = pkg.name;
-            card.dataset.price = pkg.price;
-            card.innerHTML = '<div class="pkg-name">' + pkg.name + '</div><div class="pkg-price">' + pkg.price + '</div>';
-            card.addEventListener('click', function () {
-                document.querySelectorAll('#packageGrid .package-card').forEach(function (c) { c.classList.remove('selected'); });
-                card.classList.add('selected');
-                selectedPackage = pkg.name;
-                selectedPrice = pkg.price;
-                updateSummary();
+        if (packages[selectedGame]) {
+            packages[selectedGame].forEach(function (pkg) {
+                var card = document.createElement('div');
+                card.className = 'package-card';
+                card.dataset.name = pkg.name;
+                card.dataset.price = pkg.price;
+                card.innerHTML = '<div class="pkg-name">' + pkg.name + '</div><div class="pkg-price">' + pkg.price + '</div>';
+                card.addEventListener('click', function () {
+                    document.querySelectorAll('#packageGrid .package-card').forEach(function (c) { c.classList.remove('selected'); });
+                    card.classList.add('selected');
+                    selectedPackage = pkg.name;
+                    selectedPrice = pkg.price;
+                    updateSummary();
+                });
+                packageGrid.appendChild(card);
             });
-            packageGrid.appendChild(card);
-        });
+        }
         selectedPackage = null;
         selectedPrice = null;
         serverIdGroup.style.display = noServerGames.indexOf(selectedGame) !== -1 ? 'none' : 'block';
@@ -225,7 +479,7 @@
             var pesan = 'Halo AsliApp, saya mau top up game:%0AGame: ' + encodeURIComponent(selectedGame) +
                 '%0AID Akun: ' + encodeURIComponent(idLine) +
                 '%0ANominal: ' + encodeURIComponent(selectedPackage + ' (' + selectedPrice + ')');
-            pesanBtn.href = 'https://wa.me/6281234567890?text=' + pesan;
+            pesanBtn.href = 'https://wa.me/6288989942301?text=' + pesan;
             pesanBtn.removeAttribute('disabled');
         } else {
             pesanBtn.href = '#';
