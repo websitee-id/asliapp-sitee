@@ -505,3 +505,94 @@ footer .foot-links a { text-decoration: none; font-weight: 600; color: var(--ink
     .stat-row, .app-grid, .trust-strip, .cat-preview-grid { grid-template-columns: 1fr; }
     .search-pill { min-width: 0; flex: 1; }
 }
+
+/* ---------- Form fields (pulsa / topup-game) ---------- */
+.form-group { margin-bottom: 26px; }
+.form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: .85rem;
+    margin-bottom: 10px;
+    color: var(--ink-900);
+}
+.form-input {
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: var(--radius-pill);
+    border: 1px solid #e6e2d8;
+    font-family: inherit;
+    font-size: .9rem;
+    background: var(--surface);
+    color: var(--text);
+}
+.form-input:focus { outline: none; border-color: var(--sky); }
+
+/* ---------- Game selector cards ---------- */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+}
+.game-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 24px -18px rgba(56,63,55,.35);
+    transition: border .15s ease, transform .15s ease;
+}
+.game-card:hover { transform: translateY(-2px); }
+.game-card.selected { border-color: var(--ink); }
+.game-card i { font-size: 1.5rem; margin-bottom: 10px; display: block; color: var(--ink-900); }
+.game-card span { font-weight: 700; font-size: .82rem; }
+
+/* ---------- Package / nominal cards ---------- */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+}
+.package-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 24px -18px rgba(56,63,55,.35);
+    transition: border .15s ease, transform .15s ease;
+}
+.package-card:hover { transform: translateY(-2px); }
+.package-card.selected { border-color: var(--ink); background: var(--mint); }
+.package-card .pkg-name { font-weight: 700; font-size: .86rem; margin-bottom: 6px; color: var(--ink-900); }
+.package-card .pkg-price { font-family: 'IBM Plex Mono', monospace; font-size: .92rem; color: var(--ink-900); }
+
+/* ---------- Order summary bar ---------- */
+.order-summary {
+    background: var(--ink);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 26px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 46px;
+    position: sticky;
+    bottom: 20px;
+}
+.order-summary .summary-text { font-size: .82rem; color: #b7c2b6; }
+.order-summary .summary-value { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; color: #fff; margin-top: 2px; }
+.order-summary .btn[disabled] { opacity: .45; pointer-events: none; }
+
+@media (max-width: 960px) {
+    .game-grid, .package-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 620px) {
+    .game-grid, .package-grid { grid-template-columns: repeat(2, 1fr); }
+}
