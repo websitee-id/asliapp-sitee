@@ -48,11 +48,12 @@
         </div>
         <div class="chip-row" id="providerRow">
             <button class="chip active" data-provider="Telkomsel">Telkomsel</button>
-            <button class="chip" data-provider="Indosat Ooredoo">Indosat Ooredoo</button>
-            <button class="chip" data-provider="XL Axiata">XL Axiata</button>
-            <button class="chip" data-provider="Tri (3)">Tri (3)</button>
+            <button class="chip" data-provider="Indosat">Indosat Ooredoo</button>
+            <button class="chip" data-provider="XL">XL Axiata</button>
+            <button class="chip" data-provider="AXIS">Axis</button>
+            <button class="chip" data-provider="Tri">Tri (3)</button>
             <button class="chip" data-provider="Smartfren">Smartfren</button>
-            <button class="chip" data-provider="Axis">Axis</button>
+            <button class="chip" data-provider="by.U">by.U</button>
         </div>
 
         <div class="section-head">
@@ -70,40 +71,9 @@
                 <h3>3. Pilih nominal</h3>
             </div>
         </div>
-        <div class="package-grid" id="nominalGrid">
-            <div class="package-card" data-nominal="Rp5.000" data-price="Rp6.500">
-                <div class="pkg-name">Pulsa Rp5.000</div>
-                <div class="pkg-price">Rp6.500</div>
-            </div>
-            <div class="package-card" data-nominal="Rp10.000" data-price="Rp11.500">
-                <div class="pkg-name">Pulsa Rp10.000</div>
-                <div class="pkg-price">Rp11.500</div>
-            </div>
-            <div class="package-card" data-nominal="Rp20.000" data-price="Rp21.500">
-                <div class="pkg-name">Pulsa Rp20.000</div>
-                <div class="pkg-price">Rp21.500</div>
-            </div>
-            <div class="package-card" data-nominal="Rp25.000" data-price="Rp26.500">
-                <div class="pkg-name">Pulsa Rp25.000</div>
-                <div class="pkg-price">Rp26.500</div>
-            </div>
-            <div class="package-card" data-nominal="Rp50.000" data-price="Rp51.500">
-                <div class="pkg-name">Pulsa Rp50.000</div>
-                <div class="pkg-price">Rp51.500</div>
-            </div>
-            <div class="package-card" data-nominal="Rp100.000" data-price="Rp101.500">
-                <div class="pkg-name">Pulsa Rp100.000</div>
-                <div class="pkg-price">Rp101.500</div>
-            </div>
-            <div class="package-card" data-nominal="Paket Data 3GB" data-price="Rp25.000">
-                <div class="pkg-name">Paket Data 3GB</div>
-                <div class="pkg-price">Rp25.000</div>
-            </div>
-            <div class="package-card" data-nominal="Paket Data 10GB" data-price="Rp55.000">
-                <div class="pkg-name">Paket Data 10GB</div>
-                <div class="pkg-price">Rp55.000</div>
-            </div>
-        </div>
+        
+        <!-- Nominal list akan di-generate oleh JavaScript di bawah ini -->
+        <div class="package-grid" id="nominalGrid"></div>
 
         <div class="order-summary">
             <div>
@@ -131,32 +101,150 @@
 
 <script src="assets/script.js"></script>
 <script>
+    // Data Lengkap Harga Pulsa
+    const dataPulsa = {
+        "XL": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "25.000", harga: "Rp27.000" },
+            { nominal: "30.000", harga: "Rp32.000" }, { nominal: "50.000", harga: "Rp52.000" },
+            { nominal: "100.000", harga: "Rp102.000" }, { nominal: "150.000", harga: "Rp152.000" },
+            { nominal: "200.000", harga: "Rp202.000" }, { nominal: "300.000", harga: "Rp302.000" },
+            { nominal: "500.000", harga: "Rp502.000" }, { nominal: "1.000.000", harga: "Rp1.002.000" }
+        ],
+        "AXIS": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "25.000", harga: "Rp27.000" },
+            { nominal: "30.000", harga: "Rp32.000" }, { nominal: "40.000", harga: "Rp42.000" },
+            { nominal: "50.000", harga: "Rp52.000" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "70.000", harga: "Rp72.000" }, { nominal: "80.000", harga: "Rp82.000" },
+            { nominal: "90.000", harga: "Rp92.000" }, { nominal: "100.000", harga: "Rp102.000" },
+            { nominal: "150.000", harga: "Rp152.000" }, { nominal: "200.000", harga: "Rp202.000" },
+            { nominal: "300.000", harga: "Rp302.000" }, { nominal: "500.000", harga: "Rp502.000" },
+            { nominal: "1.000.000", harga: "Rp1.002.000" }
+        ],
+        "Indosat": [
+            { nominal: "5.000", harga: "Rp7.500" }, { nominal: "10.000", harga: "Rp12.500" },
+            { nominal: "12.000", harga: "Rp14.500" }, { nominal: "15.000", harga: "Rp17.500" },
+            { nominal: "20.000", harga: "Rp22.500" }, { nominal: "25.000", harga: "Rp27.500" },
+            { nominal: "30.000", harga: "Rp32.500" }, { nominal: "40.000", harga: "Rp42.500" },
+            { nominal: "50.000", harga: "Rp52.500" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "70.000", harga: "Rp72.000" }, { nominal: "80.000", harga: "Rp82.000" },
+            { nominal: "90.000", harga: "Rp92.000" }, { nominal: "100.000", harga: "Rp102.000" },
+            { nominal: "115.000", harga: "Rp117.000" }, { nominal: "125.000", harga: "Rp127.000" },
+            { nominal: "150.000", harga: "Rp152.000" }, { nominal: "175.000", harga: "Rp177.000" },
+            { nominal: "200.000", harga: "Rp202.000" }, { nominal: "225.000", harga: "Rp227.000" },
+            { nominal: "250.000", harga: "Rp252.000" }, { nominal: "300.000", harga: "Rp302.000" },
+            { nominal: "340.000", harga: "Rp342.000" }, { nominal: "400.000", harga: "Rp402.000" },
+            { nominal: "500.000", harga: "Rp502.000" }, { nominal: "1.000.000", harga: "Rp1.002.000" }
+        ],
+        "Telkomsel": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "20.000", harga: "Rp22.000" },
+            { nominal: "25.000", harga: "Rp27.000" }, { nominal: "30.000", harga: "Rp32.000" },
+            { nominal: "35.000", harga: "Rp37.000" }, { nominal: "40.000", harga: "Rp42.000" },
+            { nominal: "45.000", harga: "Rp47.000" }, { nominal: "50.000", harga: "Rp52.000" },
+            { nominal: "55.000", harga: "Rp57.000" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "65.000", harga: "Rp67.000" }, { nominal: "70.000", harga: "Rp72.000" },
+            { nominal: "75.000", harga: "Rp77.000" }, { nominal: "80.000", harga: "Rp82.000" },
+            { nominal: "85.000", harga: "Rp87.000" }, { nominal: "90.000", harga: "Rp92.000" },
+            { nominal: "95.000", harga: "Rp97.000" }, { nominal: "100.000", harga: "Rp102.000" },
+            { nominal: "150.000", harga: "Rp152.000" }, { nominal: "200.000", harga: "Rp202.000" },
+            { nominal: "250.000", harga: "Rp252.000" }, { nominal: "300.000", harga: "Rp302.000" },
+            { nominal: "350.000", harga: "Rp352.000" }, { nominal: "400.000", harga: "Rp402.000" },
+            { nominal: "450.000", harga: "Rp452.000" }, { nominal: "500.000", harga: "Rp502.000" },
+            { nominal: "1.000.000", harga: "Rp1.002.000" }
+        ],
+        "Tri": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "20.000", harga: "Rp22.000" },
+            { nominal: "25.000", harga: "Rp27.000" }, { nominal: "30.000", harga: "Rp32.000" },
+            { nominal: "35.000", harga: "Rp37.000" }, { nominal: "40.000", harga: "Rp42.000" },
+            { nominal: "45.000", harga: "Rp47.000" }, { nominal: "50.000", harga: "Rp52.000" },
+            { nominal: "55.000", harga: "Rp57.000" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "65.000", harga: "Rp67.000" }, { nominal: "70.000", harga: "Rp72.000" },
+            { nominal: "75.000", harga: "Rp77.000" }, { nominal: "80.000", harga: "Rp82.000" },
+            { nominal: "85.000", harga: "Rp87.000" }, { nominal: "90.000", harga: "Rp92.000" },
+            { nominal: "100.000", harga: "Rp102.000" }, { nominal: "150.000", harga: "Rp152.000" },
+            { nominal: "200.000", harga: "Rp202.000" }, { nominal: "250.000", harga: "Rp252.000" },
+            { nominal: "300.000", harga: "Rp302.000" }, { nominal: "500.000", harga: "Rp502.000" }
+        ],
+        "Smartfren": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "20.000", harga: "Rp22.000" },
+            { nominal: "25.000", harga: "Rp27.000" }, { nominal: "30.000", harga: "Rp32.000" },
+            { nominal: "35.000", harga: "Rp37.000" }, { nominal: "40.000", harga: "Rp42.000" },
+            { nominal: "45.000", harga: "Rp47.000" }, { nominal: "50.000", harga: "Rp52.000" },
+            { nominal: "55.000", harga: "Rp57.000" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "65.000", harga: "Rp67.000" }, { nominal: "75.000", harga: "Rp77.000" },
+            { nominal: "80.000", harga: "Rp82.000" }, { nominal: "85.000", harga: "Rp87.000" },
+            { nominal: "90.000", harga: "Rp92.000" }, { nominal: "95.000", harga: "Rp97.000" },
+            { nominal: "100.000", harga: "Rp102.000" }, { nominal: "125.000", harga: "Rp127.000" },
+            { nominal: "150.000", harga: "Rp152.000" }, { nominal: "200.000", harga: "Rp202.000" },
+            { nominal: "300.000", harga: "Rp302.000" }, { nominal: "500.000", harga: "Rp502.000" }
+        ],
+        "by.U": [
+            { nominal: "5.000", harga: "Rp7.000" }, { nominal: "10.000", harga: "Rp12.000" },
+            { nominal: "15.000", harga: "Rp17.000" }, { nominal: "20.000", harga: "Rp22.000" },
+            { nominal: "25.000", harga: "Rp27.000" }, { nominal: "30.000", harga: "Rp32.000" },
+            { nominal: "35.000", harga: "Rp37.000" }, { nominal: "40.000", harga: "Rp42.000" },
+            { nominal: "45.000", harga: "Rp47.000" }, { nominal: "50.000", harga: "Rp52.000" },
+            { nominal: "55.000", harga: "Rp57.000" }, { nominal: "60.000", harga: "Rp62.000" },
+            { nominal: "65.000", harga: "Rp67.000" }, { nominal: "70.000", harga: "Rp72.000" },
+            { nominal: "75.000", harga: "Rp77.000" }, { nominal: "80.000", harga: "Rp82.000" },
+            { nominal: "85.000", harga: "Rp87.000" }, { nominal: "90.000", harga: "Rp92.000" },
+            { nominal: "95.000", harga: "Rp97.000" }, { nominal: "100.000", harga: "Rp102.000" }
+        ]
+    };
+
     var selectedProvider = 'Telkomsel';
     var selectedNominal = null;
     var selectedPrice = null;
 
     var providerChips = document.querySelectorAll('#providerRow .chip');
-    var nominalCards = document.querySelectorAll('#nominalGrid .package-card');
+    var nominalGrid = document.getElementById('nominalGrid');
     var summaryText = document.getElementById('summaryText');
     var pesanBtn = document.getElementById('pesanBtn');
     var nomorHpInput = document.getElementById('nomorHp');
 
+    // Fungsi Render Paket Berdasarkan Provider
+    function renderPackages(providerKey) {
+        nominalGrid.innerHTML = '';
+        var packages = dataPulsa[providerKey] || [];
+        
+        packages.forEach(function(pkg) {
+            var div = document.createElement('div');
+            div.className = 'package-card';
+            div.dataset.nominal = 'Pulsa Rp' + pkg.nominal;
+            div.dataset.price = pkg.harga;
+            div.innerHTML = '<div class="pkg-name">Pulsa Rp' + pkg.nominal + '</div>' +
+                            '<div class="pkg-price">' + pkg.harga + '</div>';
+            
+            div.addEventListener('click', function() {
+                document.querySelectorAll('#nominalGrid .package-card').forEach(function(c) {
+                    c.classList.remove('selected');
+                });
+                div.classList.add('selected');
+                selectedNominal = div.dataset.nominal;
+                selectedPrice = div.dataset.price;
+                updateSummary();
+            });
+            
+            nominalGrid.appendChild(div);
+        });
+
+        // Reset nominal setiap pindah tab provider
+        selectedNominal = null;
+        selectedPrice = null;
+        updateSummary();
+    }
+
+    // Event Listener Chips Provider
     providerChips.forEach(function (chip) {
         chip.addEventListener('click', function () {
             providerChips.forEach(function (c) { c.classList.remove('active'); });
             chip.classList.add('active');
-            selectedProvider = chip.dataset.provider;
-            updateSummary();
-        });
-    });
-
-    nominalCards.forEach(function (card) {
-        card.addEventListener('click', function () {
-            nominalCards.forEach(function (c) { c.classList.remove('selected'); });
-            card.classList.add('selected');
-            selectedNominal = card.dataset.nominal;
-            selectedPrice = card.dataset.price;
-            updateSummary();
+            selectedProvider = chip.innerText; // Simpan teks aslinya (misal: "Telkomsel" atau "XL Axiata")
+            renderPackages(chip.dataset.provider);
         });
     });
 
@@ -181,6 +269,12 @@
     }
 
     nomorHpInput.addEventListener('input', updateSummary);
+
+    // Initial render untuk default (Telkomsel)
+    renderPackages('Telkomsel');
+
+    // Tahun dinamis di footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
