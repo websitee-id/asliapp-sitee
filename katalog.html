@@ -9,6 +9,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+    .variant-select {
+        width: 100%;
+        padding: 8px 10px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border, #e2e8f0);
+        background-color: var(--surface, #f8fafc);
+        font-size: 0.85rem;
+        font-family: inherit;
+        color: var(--ink, #0f172a);
+        outline: none;
+        cursor: pointer;
+    }
+    .variant-select:focus {
+        border-color: var(--primary, #2563eb);
+    }
+</style>
 </head>
 <body>
 
@@ -26,7 +45,7 @@
         </nav>
         <div class="sidebar-note">
             <strong>Butuh bantuan?</strong>
-            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+            Tim kami balas chat WhatsApp rata-rata dalam 20 menit, jam 08.00–22.00 WIB.
         </div>
     </aside>
 
@@ -62,7 +81,7 @@
 
         <div class="app-grid" id="appGrid">
 
-            <!-- HIBURAN & STREAMING -->
+            <!-- ================= HIBURAN & STREAMING ================= -->
             <div class="app-card" data-cat="hiburan" data-name="Apple Music">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-music"></i></div>
@@ -70,172 +89,13 @@
                 </div>
                 <h4>Apple Music</h4>
                 <p class="app-desc">Streaming jutaan lagu dengan kualitas Lossless Audio.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 15.000">1 Bulan Sharing — Rp 15.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 18.000">1 Bulan Private — Rp 18.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp55.000/bln</div>
-                        <div class="new-price">Rp13.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Apple%20Music" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Bstation">
-                <div class="app-top">
-                    <div class="app-icon bg-cream"><i class="fa-solid fa-tv"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Bstation</h4>
-                <p class="app-desc">Platform nonton anime resmi HD tanpa iklan.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp25.000/bln</div>
-                        <div class="new-price">Rp13.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Bstation" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Disney+ Hotstar">
-                <div class="app-top">
-                    <div class="app-icon bg-sky"><i class="fa-solid fa-film"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Disney+ Hotstar</h4>
-                <p class="app-desc">Film blockbuster Marvel, Disney, dan film lokal pilihan.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp65.000/bln</div>
-                        <div class="new-price">Rp27.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Disney%2B" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="DramaBox">
-                <div class="app-top">
-                    <div class="app-icon bg-coral"><i class="fa-solid fa-video"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>DramaBox</h4>
-                <p class="app-desc">Nonton drama pendek viral dengan koin tak terbatas.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp99.000/bln</div>
-                        <div class="new-price">Rp14.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20DramaBox" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="HBO Max">
-                <div class="app-top">
-                    <div class="app-icon bg-sky"><i class="fa-solid fa-clapperboard"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>HBO Max</h4>
-                <p class="app-desc">Serial eksklusif HBO, Warner Bros, dan tayangan kualitas 4K.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp79.000/bln</div>
-                        <div class="new-price">Rp18.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20HBO%20Max" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="iQiyi">
-                <div class="app-top">
-                    <div class="app-icon bg-mint"><i class="fa-solid fa-play"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>iQiyi</h4>
-                <p class="app-desc">Drama Asia, C-Drama, dan anime terbaru subtitle Indonesia.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp39.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20iQiyi" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Loklok">
-                <div class="app-top">
-                    <div class="app-icon bg-sage"><i class="fa-solid fa-film"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Loklok</h4>
-                <p class="app-desc">Streaming film dan serial populer resolusi HD.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp45.000/bln</div>
-                        <div class="new-price">Rp21.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Loklok" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Melolo">
-                <div class="app-top">
-                    <div class="app-icon bg-coral"><i class="fa-solid fa-compact-disc"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Melolo</h4>
-                <p class="app-desc">Akses musik dan audio interaktif premium.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp30.000/bln</div>
-                        <div class="new-price">Rp11.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Melolo" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Netflix">
-                <div class="app-top">
-                    <div class="app-icon bg-coral"><i class="fa-solid fa-tv"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Netflix</h4>
-                <p class="app-desc">Nonton ribuan film, series, dan dokumenter kualitas Ultra HD.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp186.000/bln</div>
-                        <div class="new-price">Rp35.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Netflix" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="RCTI+">
-                <div class="app-top">
-                    <div class="app-icon bg-sky"><i class="fa-solid fa-broadcast-tower"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>RCTI+</h4>
-                <p class="app-desc">Streaming TV nasional, olahraga, dan konten eksklusif.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp50.000/bln</div>
-                        <div class="new-price">Rp27.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20RCTI%2B" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="hiburan" data-name="Shortmax">
-                <div class="app-top">
-                    <div class="app-icon bg-cream"><i class="fa-solid fa-mobile-screen"></i></div>
-                    <span class="cat-tag">Hiburan</span>
-                </div>
-                <h4>Shortmax</h4>
-                <p class="app-desc">Serial drama pendek format vertikal seru tanpa batas.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp49.000/bln</div>
-                        <div class="new-price">Rp14.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Shortmax" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 15.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -246,12 +106,154 @@
                 </div>
                 <h4>Spotify</h4>
                 <p class="app-desc">Mendengarkan lagu tanpa iklan dan bebas lewati trek.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Famplan" data-price="Rp 13.000">1 Bulan Famplan — Rp 13.000</option>
+                    <option value="3 Bulan Indplan" data-price="Rp 23.000">3 Bulan Indplan — Rp 23.000</option>
+                    <option value="3 Bulan Indplan (Full Garansi)" data-price="Rp 40.000">3 Bulan Indplan (Full Garansi) — Rp 40.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp55.000/bln</div>
-                        <div class="new-price">Rp12.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Spotify" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 13.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Netflix Premium">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-tv"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Netflix Premium</h4>
+                <p class="app-desc">Nonton ribuan film, series, dan dokumenter kualitas Ultra HD.</p>
+                <select class="variant-select">
+                    <option value="1 Minggu (1 Profile 2 User)" data-price="Rp 14.000">1 Minggu (1 Profile 2 User) — Rp 14.000</option>
+                    <option value="1 Minggu (1 Profile 1 User)" data-price="Rp 16.000">1 Minggu (1 Profile 1 User) — Rp 16.000</option>
+                    <option value="1 Bulan (1 Profile 2 User)" data-price="Rp 19.000">1 Bulan (1 Profile 2 User) — Rp 19.000</option>
+                    <option value="1 Bulan (1 Profile 1 User)" data-price="Rp 29.000">1 Bulan (1 Profile 1 User) — Rp 29.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 14.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Disney+ Hotstar">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-film"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Disney+ Hotstar</h4>
+                <p class="app-desc">Film blockbuster Marvel, Disney, dan film lokal pilihan.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing Premium" data-price="Rp 29.000">1 Bulan Sharing Premium — Rp 29.000</option>
+                    <option value="1 Bulan Private Premium" data-price="Rp 39.000">1 Bulan Private Premium — Rp 39.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 29.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Bstation">
+                <div class="app-top">
+                    <div class="app-icon bg-cream"><i class="fa-solid fa-tv"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Bstation</h4>
+                <p class="app-desc">Platform nonton anime resmi HD tanpa iklan.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 15.000">1 Bulan Sharing — Rp 15.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 16.000">3 Bulan Sharing — Rp 16.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 37.000">1 Bulan Private — Rp 37.000</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 42.000">1 Tahun Sharing — Rp 42.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 15.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="HBO Max">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-clapperboard"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>HBO Max</h4>
+                <p class="app-desc">Serial eksklusif HBO, Warner Bros, dan tayangan kualitas 4K.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Standard" data-price="Rp 20.000">1 Bulan Standard — Rp 20.000</option>
+                    <option value="1 Bulan Ultimate" data-price="Rp 24.000">1 Bulan Ultimate — Rp 24.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 20.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="iQIYI">
+                <div class="app-top">
+                    <div class="app-icon bg-mint"><i class="fa-solid fa-play"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>iQIYI</h4>
+                <p class="app-desc">Drama Asia, C-Drama, dan anime terbaru subtitle Indonesia.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 19.000">1 Bulan Sharing — Rp 19.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 24.000">3 Bulan Sharing — Rp 24.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Loklok">
+                <div class="app-top">
+                    <div class="app-icon bg-sage"><i class="fa-solid fa-film"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Loklok</h4>
+                <p class="app-desc">Streaming film dan serial populer resolusi HD.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Basic Sharing" data-price="Rp 23.000">1 Bulan Basic Sharing — Rp 23.000</option>
+                    <option value="1 Bulan Standard Sharing" data-price="Rp 26.000">1 Bulan Standard Sharing — Rp 26.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 23.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Prime Video">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-circle-play"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Prime Video</h4>
+                <p class="app-desc">Streaming Amazon Originals dan film eksklusif pilihan.</p>
+                <select class="variant-select">
+                    <option value="Sharing" data-price="Rp 19.000">Sharing — Rp 19.000</option>
+                    <option value="Private" data-price="Rp 25.000">Private — Rp 25.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="RCTI+">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-broadcast-tower"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>RCTI+</h4>
+                <p class="app-desc">Streaming TV nasional, olahraga, dan konten eksklusif.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 29.000">1 Bulan Sharing — Rp 29.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 42.000">1 Bulan Private — Rp 42.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 29.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -262,12 +264,16 @@
                 </div>
                 <h4>Vidio</h4>
                 <p class="app-desc">Nonton Liga Inggris, UCL, Original Series, dan TV lokal.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Mobile Sharing" data-price="Rp 19.000">1 Bulan Mobile Sharing — Rp 19.000</option>
+                    <option value="1 Bulan All Device Sharing" data-price="Rp 24.000">1 Bulan All Device Sharing — Rp 24.000</option>
+                    <option value="1 Bulan Mobile Private" data-price="Rp 29.000">1 Bulan Mobile Private — Rp 29.000</option>
+                    <option value="1 Bulan All Device Private" data-price="Rp 39.000">1 Bulan All Device Private — Rp 39.000</option>
+                    <option value="1 Tahun TV Only" data-price="Rp 105.000">1 Tahun TV Only — Rp 105.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp39.000/bln</div>
-                        <div class="new-price">Rp23.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Vidio" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -278,12 +284,14 @@
                 </div>
                 <h4>Vision+</h4>
                 <p class="app-desc">Tayangan olahraga live, channel TV premium, dan film.</p>
+                <select class="variant-select">
+                    <option value="7 Hari Private" data-price="Rp 13.000">7 Hari Private — Rp 13.000</option>
+                    <option value="1 Bulan Sharing" data-price="Rp 14.000">1 Bulan Sharing — Rp 14.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 19.500">1 Bulan Private — Rp 19.500</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp35.000/bln</div>
-                        <div class="new-price">Rp12.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Vision%2B" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 13.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -294,12 +302,14 @@
                 </div>
                 <h4>Viu</h4>
                 <p class="app-desc">Pusat Drama Korea terbaru, Variety Show, dan Asia Movies.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Unlimited" data-price="Rp 6.000">1 Bulan Unlimited — Rp 6.000</option>
+                    <option value="1 Tahun Unlimited" data-price="Rp 11.000">1 Tahun Unlimited — Rp 11.000</option>
+                    <option value="Lifetime Unlimited" data-price="Rp 19.000">Lifetime Unlimited — Rp 19.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp33.000/bln</div>
-                        <div class="new-price">Rp4.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Viu" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 6.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -310,12 +320,13 @@
                 </div>
                 <h4>WeTV</h4>
                 <p class="app-desc">Streaming drama Asia dan series Indonesia eksklusif VIP.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan 3 User" data-price="Rp 19.000">1 Bulan 3 User — Rp 19.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 39.000">1 Bulan Private — Rp 39.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp39.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20WeTV" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -326,62 +337,106 @@
                 </div>
                 <h4>Youku</h4>
                 <p class="app-desc">Tonton drama China eksklusif dan variety show populer.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 12.500">1 Bulan Sharing — Rp 12.500</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 16.000">3 Bulan Sharing — Rp 16.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 30.000">1 Bulan Private — Rp 30.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp29.000/bln</div>
-                        <div class="new-price">Rp10.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Youku" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 12.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="hiburan" data-name="YouTube Premium">
+            <div class="app-card" data-cat="hiburan" data-name="YouTube">
                 <div class="app-top">
                     <div class="app-icon bg-coral"><i class="fa-brands fa-youtube"></i></div>
                     <span class="cat-tag">Hiburan</span>
                 </div>
                 <h4>YouTube Premium</h4>
                 <p class="app-desc">Nonton video bebas iklan, putar latar belakang &amp; YouTube Music.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Famplan" data-price="Rp 8.000">1 Bulan Famplan — Rp 8.000</option>
+                    <option value="1 Bulan Indplan" data-price="Rp 9.000">1 Bulan Indplan — Rp 9.000</option>
+                    <option value="1 Bulan Famhead" data-price="Rp 12.000">1 Bulan Famhead — Rp 12.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp59.000/bln</div>
-                        <div class="new-price">Rp6.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20YouTube%20Premium" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 8.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Dramabox">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-video"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Dramabox</h4>
+                <p class="app-desc">Nonton drama pendek viral dengan koin tak terbatas.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan iOS" data-price="Rp 16.000">1 Bulan iOS — Rp 16.000</option>
+                    <option value="1 Bulan Android" data-price="Rp 17.500">1 Bulan Android — Rp 17.500</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 16.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Melolo">
+                <div class="app-top">
+                    <div class="app-icon bg-coral"><i class="fa-solid fa-compact-disc"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Melolo</h4>
+                <p class="app-desc">Akses drama pendek dan hiburan interaktif premium.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 13.000">1 Bulan Sharing — Rp 13.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 23.000">3 Bulan Sharing — Rp 23.000</option>
+                    <option value="6 Bulan Sharing" data-price="Rp 26.000">6 Bulan Sharing — Rp 26.000</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 34.000">1 Tahun Sharing — Rp 34.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 13.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="hiburan" data-name="Shortmax">
+                <div class="app-top">
+                    <div class="app-icon bg-cream"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <span class="cat-tag">Hiburan</span>
+                </div>
+                <h4>Shortmax</h4>
+                <p class="app-desc">Serial drama pendek format vertikal seru tanpa batas.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 16.000">1 Bulan Sharing — Rp 16.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 27.000">3 Bulan Sharing — Rp 27.000</option>
+                    <option value="6 Bulan Sharing" data-price="Rp 39.000">6 Bulan Sharing — Rp 39.000</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 69.000">1 Tahun Sharing — Rp 69.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 16.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
 
-            <!-- PRODUKTIVITAS & AI -->
-            <div class="app-card" data-cat="produktivitas" data-name="Blackbox AI">
+            <!-- ================= PRODUKTIVITAS & AI ================= -->
+            <div class="app-card" data-cat="produktivitas" data-name="Blackbox">
                 <div class="app-top">
                     <div class="app-icon bg-sage"><i class="fa-solid fa-code"></i></div>
                     <span class="cat-tag">Produktivitas</span>
                 </div>
                 <h4>Blackbox AI</h4>
                 <p class="app-desc">Asisten AI untuk autocompletion kode pemrograman cepat.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 8.000">1 Bulan Sharing — Rp 8.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 20.500">1 Bulan Private — Rp 20.500</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp150.000/bln</div>
-                        <div class="new-price">Rp6.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Blackbox" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="produktivitas" data-name="Camscanner">
-                <div class="app-top">
-                    <div class="app-icon bg-mint"><i class="fa-solid fa-file-invoice"></i></div>
-                    <span class="cat-tag">Produktivitas</span>
-                </div>
-                <h4>Camscanner</h4>
-                <p class="app-desc">Scan dokumen via HP jadi PDF rapi, tanpa watermark.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp75.000/bln</div>
-                        <div class="new-price">Rp13.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Camscanner" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 8.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -390,83 +445,142 @@
                     <div class="app-icon bg-sky"><i class="fa-solid fa-robot"></i></div>
                     <span class="cat-tag">Produktivitas</span>
                 </div>
-                <h4>ChatGPT</h4>
-                <p class="app-desc">Akses GPT-4o, DALL-E 3, analisis data, dan respon super cepat.</p>
+                <h4>ChatGPT Standard</h4>
+                <p class="app-desc">Model AI cerdas untuk penulisan, riset, dan analisis data.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Private" data-price="Rp 29.000">1 Bulan Private — Rp 29.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 39.000">3 Bulan Sharing — Rp 39.000</option>
+                    <option value="1 Bulan Head" data-price="Rp 85.000">1 Bulan Head — Rp 85.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp315.000/bln</div>
-                        <div class="new-price">Rp27.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20ChatGPT" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 29.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="produktivitas" data-name="Gemini Advanced">
+            <div class="app-card" data-cat="produktivitas" data-name="ChatGPT Go">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-bolt"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>ChatGPT Go</h4>
+                <p class="app-desc">Akses praktis ChatGPT jangka panjang hemat biaya.</p>
+                <select class="variant-select">
+                    <option value="4 Bulan" data-price="Rp 32.000">4 Bulan — Rp 32.000</option>
+                    <option value="1 Tahun" data-price="Rp 49.000">1 Tahun — Rp 49.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 32.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="ChatGPT Plus">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-brain"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>ChatGPT Plus / Pro</h4>
+                <p class="app-desc">Fitur tercanggih GPT-4o, DALL-E 3 &amp; Advanced Data Analysis.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 19.000">1 Bulan Sharing — Rp 19.000</option>
+                    <option value="1 Bulan Pro via Invite" data-price="Rp 24.000">1 Bulan Pro via Invite — Rp 24.000</option>
+                    <option value="1 Bulan Pro Private" data-price="Rp 30.000">1 Bulan Pro Private — Rp 30.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="Claude AI Pro">
+                <div class="app-top">
+                    <div class="app-icon bg-cream"><i class="fa-solid fa-comments"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>Claude AI Pro</h4>
+                <p class="app-desc">Model AI dengan kemampuan analisis teks dan coding mendalam.</p>
+                <select class="variant-select">
+                    <option value="Sharing 10 User (1B Full Garansi)" data-price="Rp 89.000">Sharing 10 User (1B Full Garansi) — Rp 89.000</option>
+                    <option value="Sharing 7 User (1B Full Garansi)" data-price="Rp 99.000">Sharing 7 User (1B Full Garansi) — Rp 99.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 89.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="Gemini">
                 <div class="app-top">
                     <div class="app-icon bg-cream"><i class="fa-solid fa-sparkles"></i></div>
                     <span class="cat-tag">Produktivitas</span>
                 </div>
                 <h4>Gemini AI</h4>
                 <p class="app-desc">Model AI tercanggih dari Google untuk analisis dan ide kreatif.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Private" data-price="Rp 14.500">1 Bulan Private — Rp 14.500</option>
+                    <option value="1 Tahun Private" data-price="Rp 42.000">1 Tahun Private — Rp 42.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp300.000/bln</div>
-                        <div class="new-price">Rp12.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Gemini" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 14.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="produktivitas" data-name="Grok AI">
-                <div class="app-top">
-                    <div class="app-icon bg-coral"><i class="fa-solid fa-brain"></i></div>
-                    <span class="cat-tag">Produktivitas</span>
-                </div>
-                <h4>Grok AI</h4>
-                <p class="app-desc">AI cerdas berwawasan luas dari X (Twitter).</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp120.000/bln</div>
-                        <div class="new-price">Rp6.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Grok%20AI" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="produktivitas" data-name="Perplexity Pro">
+            <div class="app-card" data-cat="produktivitas" data-name="Perplexity">
                 <div class="app-top">
                     <div class="app-icon bg-mint"><i class="fa-solid fa-magnifying-glass"></i></div>
                     <span class="cat-tag">Produktivitas</span>
                 </div>
                 <h4>Perplexity Pro</h4>
                 <p class="app-desc">Mesin pencari berbasis AI dengan rujukan sumber yang presisi.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 19.000">1 Bulan Sharing — Rp 19.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 27.000">1 Bulan Private — Rp 27.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp315.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Perplexity" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="produktivitas" data-name="Zoom Premium">
+            <div class="app-card" data-cat="produktivitas" data-name="Microsoft Office">
+                <div class="app-top">
+                    <div class="app-icon bg-sky"><i class="fa-solid fa-file-word"></i></div>
+                    <span class="cat-tag">Produktivitas</span>
+                </div>
+                <h4>Microsoft Office</h4>
+                <p class="app-desc">Lisensi resmi Word, Excel, PowerPoint, &amp; Cloud Storage.</p>
+                <select class="variant-select">
+                    <option value="Office 2016" data-price="Rp 45.000">Office 2016 — Rp 45.000</option>
+                    <option value="Office 365" data-price="Rp 47.000">Office 365 — Rp 47.000</option>
+                    <option value="Office 2019" data-price="Rp 59.000">Office 2019 — Rp 59.000</option>
+                    <option value="Office 2021" data-price="Rp 69.000">Office 2021 — Rp 69.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 45.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="produktivitas" data-name="Zoom">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-video"></i></div>
                     <span class="cat-tag">Produktivitas</span>
                 </div>
                 <h4>Zoom Pro</h4>
                 <p class="app-desc">Rapat online tanpa batas waktu 40 menit &amp; fitur breakout room.</p>
+                <select class="variant-select">
+                    <option value="7 Hari" data-price="Rp 9.000">7 Hari — Rp 9.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp230.000/bln</div>
-                        <div class="new-price">Rp7.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Zoom" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 9.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
 
-            <!-- EDIT FOTO & VIDEO -->
+            <!-- ================= EDIT FOTO & VIDEO ================= -->
             <div class="app-card" data-cat="edit" data-name="Beauty Plus">
                 <div class="app-top">
                     <div class="app-icon bg-coral"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
@@ -474,304 +588,328 @@
                 </div>
                 <h4>Beauty Plus</h4>
                 <p class="app-desc">Edit selfie dan retouch wajah otomatis hasil natural.</p>
+                <select class="variant-select">
+                    <option value="Lifetime Android" data-price="Rp 22.000">Lifetime Android — Rp 22.000</option>
+                    <option value="Lifetime iOS" data-price="Rp 25.000">Lifetime iOS — Rp 25.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp85.000</div>
-                        <div class="new-price">Rp20.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Beauty%20Plus" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 22.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Canva Pro">
+            <div class="app-card" data-cat="edit" data-name="Canva">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-palette"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Canva Pro</h4>
                 <p class="app-desc">Buka jutaan elemen, foto, font, dan penghapus latar belakang.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan" data-price="Rp 4.000">1 Bulan — Rp 4.000</option>
+                    <option value="1 Bulan Admin" data-price="Rp 7.000">1 Bulan Admin — Rp 7.000</option>
+                    <option value="1 Bulan Head" data-price="Rp 19.000">1 Bulan Head — Rp 19.000</option>
+                    <option value="1 Tahun" data-price="Rp 20.000">1 Tahun — Rp 20.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp95.000/bln</div>
-                        <div class="new-price">Rp5.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Canva%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 4.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="CapCut Pro">
+            <div class="app-card" data-cat="edit" data-name="Capcut">
                 <div class="app-top">
                     <div class="app-icon bg-cream"><i class="fa-solid fa-scissors"></i></div>
                     <span class="cat-tag">Edit Video</span>
                 </div>
                 <h4>CapCut Pro</h4>
                 <p class="app-desc">Efek video pro, kecerdasan AI, cloud storage, tanpa watermark.</p>
+                <select class="variant-select">
+                    <option value="7 Hari Sharing" data-price="Rp 5.000">7 Hari Sharing — Rp 5.000</option>
+                    <option value="1 Bulan Sharing" data-price="Rp 9.000">1 Bulan Sharing — Rp 9.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 11.000">1 Bulan Private — Rp 11.000</option>
+                    <option value="35 Hari Sharing" data-price="Rp 18.000">35 Hari Sharing — Rp 18.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 25.000">3 Bulan Sharing — Rp 25.000</option>
+                    <option value="1 Tahun Private" data-price="Rp 56.000">1 Tahun Private — Rp 56.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp129.000/bln</div>
-                        <div class="new-price">Rp8.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20CapCut%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 5.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Dazz Cam">
+            <div class="app-card" data-cat="edit" data-name="Dazzcam">
                 <div class="app-top">
                     <div class="app-icon bg-sage"><i class="fa-solid fa-camera-retro"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Dazz Cam</h4>
                 <p class="app-desc">Efek kamera analog 80-an dan warna film retro yang otentik.</p>
+                <select class="variant-select">
+                    <option value="Lifetime iOS" data-price="Rp 22.500">Lifetime iOS — Rp 22.500</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp75.000</div>
-                        <div class="new-price">Rp20.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Dazz%20Cam" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 22.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Ibis Paint X">
-                <div class="app-top">
-                    <div class="app-icon bg-coral"><i class="fa-solid fa-paintbrush"></i></div>
-                    <span class="cat-tag">Edit Foto</span>
-                </div>
-                <h4>Ibis Paint X</h4>
-                <p class="app-desc">Aplikasi melukis digital fitur lengkap dengan ribuan kuas.</p>
-                <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp45.000/bln</div>
-                        <div class="new-price">Rp7.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Ibis%20Paint" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
-                </div>
-            </div>
-
-            <div class="app-card" data-cat="edit" data-name="Lightroom Pro">
+            <div class="app-card" data-cat="edit" data-name="Lightroom">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-sliders"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Lightroom Pro</h4>
                 <p class="app-desc">Color grading profesional, preset premium, dan seleksi AI.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 13.500">1 Bulan Sharing — Rp 13.500</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 29.000">1 Tahun Sharing — Rp 29.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp60.000/bln</div>
-                        <div class="new-price">Rp11.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Lightroom" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 13.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Meitu VIP">
+            <div class="app-card" data-cat="edit" data-name="Meitu">
                 <div class="app-top">
                     <div class="app-icon bg-mint"><i class="fa-solid fa-wand-magic"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Meitu VIP</h4>
                 <p class="app-desc">Editing foto &amp; video dengan filter estetik AI tren terkini.</p>
+                <select class="variant-select">
+                    <option value="7 Hari Private" data-price="Rp 12.000">7 Hari Private — Rp 12.000</option>
+                    <option value="1 Bulan Sharing" data-price="Rp 22.000">1 Bulan Sharing — Rp 22.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp79.000/bln</div>
-                        <div class="new-price">Rp20.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Meitu" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 12.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Picsart Gold">
+            <div class="app-card" data-cat="edit" data-name="Picsart">
                 <div class="app-top">
                     <div class="app-icon bg-cream"><i class="fa-solid fa-border-all"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Picsart Gold</h4>
                 <p class="app-desc">Bebas iklan, ribuan stiker, font premium &amp; alat AI kreatif.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 9.000">1 Bulan Sharing — Rp 9.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 14.000">1 Bulan Private — Rp 14.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp60.000/bln</div>
-                        <div class="new-price">Rp7.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Picsart" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 9.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Remini Pro">
+            <div class="app-card" data-cat="edit" data-name="Remini">
                 <div class="app-top">
                     <div class="app-icon bg-coral"><i class="fa-solid fa-sparkles"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>Remini Pro</h4>
                 <p class="app-desc">Jernihkan foto blur jadi HD seketika dengan AI mutakhir.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 15.500">1 Bulan Sharing — Rp 15.500</option>
+                    <option value="1 Bulan Private" data-price="Rp 22.500">1 Bulan Private — Rp 22.500</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp80.000/bln</div>
-                        <div class="new-price">Rp13.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Remini" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 15.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="VSCO Pro">
+            <div class="app-card" data-cat="edit" data-name="VSCO">
                 <div class="app-top">
                     <div class="app-icon bg-sage"><i class="fa-solid fa-camera"></i></div>
                     <span class="cat-tag">Edit Foto</span>
                 </div>
                 <h4>VSCO Pro</h4>
                 <p class="app-desc">Preset foto film kelas atas dan alat perbaikan visual advance.</p>
+                <select class="variant-select">
+                    <option value="1 Tahun Sharing Android" data-price="Rp 17.500">1 Tahun Sharing Android — Rp 17.500</option>
+                    <option value="1 Bulan Sharing iOS" data-price="Rp 20.500">1 Bulan Sharing iOS — Rp 20.500</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp45.000/bln</div>
-                        <div class="new-price">Rp18.500</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20VSCO" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 17.500</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edit" data-name="Wink VIP">
+            <div class="app-card" data-cat="edit" data-name="Wink">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <span class="cat-tag">Edit Video</span>
                 </div>
                 <h4>Wink VIP</h4>
                 <p class="app-desc">Penjernih kualitas video hingga 4K &amp; retouch wajah video AI.</p>
+                <select class="variant-select">
+                    <option value="7 Hari Private Android" data-price="Rp 11.000">7 Hari Private Android — Rp 11.000</option>
+                    <option value="1 Bulan Private Android" data-price="Rp 25.000">1 Bulan Private Android — Rp 25.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp50.000/bln</div>
-                        <div class="new-price">Rp9.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Wink" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 11.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
 
-            <!-- EDUKASI & BUKU -->
-            <div class="app-card" data-cat="edukasi" data-name="Brainly Plus">
+            <!-- ================= EDUKASI & BUKU ================= -->
+            <div class="app-card" data-cat="edukasi" data-name="Brainly">
                 <div class="app-top">
                     <div class="app-icon bg-sage"><i class="fa-solid fa-graduation-cap"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
                 <h4>Brainly Plus</h4>
                 <p class="app-desc">Jawaban terverifikasi ahli tanpa batas dan bebas iklan.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 29.000">1 Bulan Sharing — Rp 29.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp55.000/bln</div>
-                        <div class="new-price">Rp27.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Brainly" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 29.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edukasi" data-name="Duolingo Super">
+            <div class="app-card" data-cat="edukasi" data-name="Camscanner">
+                <div class="app-top">
+                    <div class="app-icon bg-mint"><i class="fa-solid fa-file-invoice"></i></div>
+                    <span class="cat-tag">Edukasi</span>
+                </div>
+                <h4>Camscanner</h4>
+                <p class="app-desc">Scan dokumen via HP jadi PDF rapi, tanpa watermark.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 15.000">1 Bulan Sharing — Rp 15.000</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 19.000">1 Tahun Sharing — Rp 19.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 24.000">1 Bulan Private — Rp 24.000</option>
+                </select>
+                <div class="price-row">
+                    <div class="price-block"><div class="new-price">Rp 15.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                </div>
+            </div>
+
+            <div class="app-card" data-cat="edukasi" data-name="Duolingo">
                 <div class="app-top">
                     <div class="app-icon bg-mint"><i class="fa-solid fa-language"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
                 <h4>Duolingo Super</h4>
                 <p class="app-desc">Nyawa tak terbatas untuk belajar bahasa asing tanpa jeda.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan" data-price="Rp 11.000">1 Bulan — Rp 11.000</option>
+                    <option value="2 Bulan" data-price="Rp 24.000">2 Bulan — Rp 24.000</option>
+                    <option value="3 Bulan" data-price="Rp 29.000">3 Bulan — Rp 29.000</option>
+                    <option value="1 Tahun" data-price="Rp 44.000">1 Tahun — Rp 44.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp119.000/bln</div>
-                        <div class="new-price">Rp9.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Duolingo" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 11.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edukasi" data-name="Fizzo Novel">
+            <div class="app-card" data-cat="edukasi" data-name="Fizzo">
                 <div class="app-top">
                     <div class="app-icon bg-cream"><i class="fa-solid fa-book-open"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
                 <h4>Fizzo Novel</h4>
                 <p class="app-desc">Baca ribuan novel menarik bebas iklan mengganggu.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 19.000">1 Bulan Sharing — Rp 19.000</option>
+                    <option value="3 Bulan Sharing" data-price="Rp 24.000">3 Bulan Sharing — Rp 24.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp49.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Fizzo" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edukasi" data-name="Mathway Premium">
+            <div class="app-card" data-cat="edukasi" data-name="Mathway">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-solid fa-calculator"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
                 <h4>Mathway Premium</h4>
                 <p class="app-desc">Solusi matematika lengkap beserta langkah penyelesaiannya.</p>
+                <select class="variant-select">
+                    <option value="1 Tahun Sharing" data-price="Rp 19.000">1 Tahun Sharing — Rp 19.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp150.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Mathway" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edukasi" data-name="Scribd Premium">
+            <div class="app-card" data-cat="edukasi" data-name="Scribd">
                 <div class="app-top">
                     <div class="app-icon bg-coral"><i class="fa-solid fa-book"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
-                <h4>Scribd</h4>
+                <h4>Scribd Premium</h4>
                 <p class="app-desc">Akses tak terbatas ke jutaan buku, audiobook, dan dokumen.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 11.000">1 Bulan Sharing — Rp 11.000</option>
+                    <option value="1 Bulan Private" data-price="Rp 14.000">1 Bulan Private — Rp 14.000</option>
+                    <option value="2 Bulan Private" data-price="Rp 19.000">2 Bulan Private — Rp 19.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp140.000/bln</div>
-                        <div class="new-price">Rp9.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Scribd" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 11.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="edukasi" data-name="Wattpad Premium">
+            <div class="app-card" data-cat="edukasi" data-name="Wattpad">
                 <div class="app-top">
                     <div class="app-icon bg-mint"><i class="fa-solid fa-pen-nib"></i></div>
                     <span class="cat-tag">Edukasi</span>
                 </div>
                 <h4>Wattpad Premium</h4>
                 <p class="app-desc">Baca cerita favorit offline tanpa iklan &amp; bonus koin.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan Sharing" data-price="Rp 19.000">1 Bulan Sharing — Rp 19.000</option>
+                    <option value="1 Tahun Sharing" data-price="Rp 39.000">1 Tahun Sharing — Rp 39.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp65.000/bln</div>
-                        <div class="new-price">Rp17.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Wattpad" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 19.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
 
-            <!-- KEAMANAN & UTILITAS -->
-            <div class="app-card" data-cat="keamanan" data-name="GetContact Premium">
+            <!-- ================= KEAMANAN & UTILITAS ================= -->
+            <div class="app-card" data-cat="keamanan" data-name="Getcontact">
                 <div class="app-top">
                     <div class="app-icon bg-mint"><i class="fa-solid fa-address-book"></i></div>
                     <span class="cat-tag">Keamanan</span>
                 </div>
-                <h4>GetContact</h4>
+                <h4>Getcontact Premium</h4>
                 <p class="app-desc">Ketahui nama kontak kamu di HP orang lain &amp; blokir spam.</p>
+                <select class="variant-select">
+                    <option value="1 Bulan" data-price="Rp 16.000">1 Bulan — Rp 16.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp35.000/bln</div>
-                        <div class="new-price">Rp14.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20GetContact" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 16.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
-            <div class="app-card" data-cat="keamanan" data-name="Telegram Premium">
+            <div class="app-card" data-cat="keamanan" data-name="Telegram">
                 <div class="app-top">
                     <div class="app-icon bg-sky"><i class="fa-paper-plane fa-solid"></i></div>
                     <span class="cat-tag">Keamanan</span>
                 </div>
-                <h4>Telegram Pro</h4>
+                <h4>Telegram Premium</h4>
                 <p class="app-desc">Upload file 4GB, kecepatan unduh maks, lencana profil &amp; stiker VIP.</p>
+                <select class="variant-select">
+                    <option value="Pro 1 Bulan Private" data-price="Rp 60.000">Pro 1 Bulan Private — Rp 60.000</option>
+                </select>
                 <div class="price-row">
-                    <div class="price-block">
-                        <div class="old-price">Rp89.000/bln</div>
-                        <div class="new-price">Rp58.000</div>
-                    </div>
-                    <a href="https://wa.me/6288989942301?text=Halo%20AsliApp%2C%20saya%20mau%20pesan%20Telegram%20Pro" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+                    <div class="price-block"><div class="new-price">Rp 60.000</div></div>
+                    <a href="#" class="buy-btn"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
                 </div>
             </div>
 
@@ -797,5 +935,38 @@
 </div>
 
 <script src="assets/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var adminPhone = "6288989942301";
+
+        function updateCardLink(card) {
+            var appName = card.querySelector("h4").textContent.trim();
+            var select = card.querySelector(".variant-select");
+            var priceDisplay = card.querySelector(".new-price");
+            var buyBtn = card.querySelector(".buy-btn");
+
+            if (select) {
+                var selectedOption = select.options[select.selectedIndex];
+                var variantName = selectedOption.value;
+                var price = selectedOption.dataset.price;
+
+                if (priceDisplay) priceDisplay.textContent = price;
+
+                var pesan = "Halo AsliApp, saya mau pesan aplikasi:\nAplikasi: " + appName + "\nPaket: " + variantName + " (" + price + ")";
+                buyBtn.href = "https://wa.me/" + adminPhone + "?text=" + encodeURIComponent(pesan);
+            }
+        }
+
+        document.querySelectorAll(".app-card").forEach(function (card) {
+            updateCardLink(card);
+            var select = card.querySelector(".variant-select");
+            if (select) {
+                select.addEventListener("change", function () {
+                    updateCardLink(card);
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>
