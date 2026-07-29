@@ -26,7 +26,7 @@
         </nav>
         <div class="sidebar-note">
             <strong>Butuh bantuan?</strong>
-            Tim kami balas chat WhatsApp rata-rata dalam 5 menit, jam 08.00–22.00 WIB.
+            Tim kami balas chat WhatsApp rata-rata dalam 20 menit, jam 08.00–22.00 WIB.
         </div>
     </aside>
 
@@ -38,6 +38,10 @@
             <div class="greeting">
                 <p>Isi ulang pulsa & paket data</p>
                 <h2>Isi Pulsa</h2>
+            </div>
+            <div class="search-pill">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Cari nominal pulsa (contoh: 50.000)...">
             </div>
         </div>
 
@@ -72,8 +76,12 @@
             </div>
         </div>
         
-        <!-- Nominal list akan di-generate oleh JavaScript di bawah ini -->
+        <!-- Nominal list akan di-generate oleh JavaScript -->
         <div class="package-grid" id="nominalGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Nominal pulsa tidak ditemukan. Coba masukkan angka nominal lain.
+        </div>
 
         <div class="order-summary">
             <div>
@@ -196,6 +204,7 @@
         ]
     };
 
+    var currentProviderKey = 'Telkomsel';
     var selectedProvider = 'Telkomsel';
     var selectedNominal = null;
     var selectedPrice = null;
@@ -205,36 +214,52 @@
     var summaryText = document.getElementById('summaryText');
     var pesanBtn = document.getElementById('pesanBtn');
     var nomorHpInput = document.getElementById('nomorHp');
+    var searchInput = document.getElementById('searchInput');
+    var emptyState = document.getElementById('emptyState');
 
-    // Fungsi Render Paket Berdasarkan Provider
-    function renderPackages(providerKey) {
+    // Fungsi Render Paket Berdasarkan Provider dan Kata Kunci Pencarian
+    function renderPackages() {
         nominalGrid.innerHTML = '';
-        var packages = dataPulsa[providerKey] || [];
-        
+        var query = searchInput.value.toLowerCase().trim();
+        var packages = dataPulsa[currentProviderKey] || [];
+        var count = 0;
+
         packages.forEach(function(pkg) {
-            var div = document.createElement('div');
-            div.className = 'package-card';
-            div.dataset.nominal = 'Pulsa Rp' + pkg.nominal;
-            div.dataset.price = pkg.harga;
-            div.innerHTML = '<div class="pkg-name">Pulsa Rp' + pkg.nominal + '</div>' +
-                            '<div class="pkg-price">' + pkg.harga + '</div>';
-            
-            div.addEventListener('click', function() {
-                document.querySelectorAll('#nominalGrid .package-card').forEach(function(c) {
-                    c.classList.remove('selected');
+            var nominalText = 'Pulsa Rp' + pkg.nominal;
+            var isMatch = nominalText.toLowerCase().includes(query) || pkg.nominal.replaceAll('.', '').includes(query);
+
+            if (isMatch) {
+                count++;
+                var div = document.createElement('div');
+                div.className = 'package-card';
+                if (selectedNominal === nominalText) {
+                    div.classList.add('selected');
+                }
+                div.dataset.nominal = nominalText;
+                div.dataset.price = pkg.harga;
+                div.innerHTML = '<div class="pkg-name">' + nominalText + '</div>' +
+                                '<div class="pkg-price">' + pkg.harga + '</div>';
+                
+                div.addEventListener('click', function() {
+                    document.querySelectorAll('#nominalGrid .package-card').forEach(function(c) {
+                        c.classList.remove('selected');
+                    });
+                    div.classList.add('selected');
+                    selectedNominal = div.dataset.nominal;
+                    selectedPrice = div.dataset.price;
+                    updateSummary();
                 });
-                div.classList.add('selected');
-                selectedNominal = div.dataset.nominal;
-                selectedPrice = div.dataset.price;
-                updateSummary();
-            });
-            
-            nominalGrid.appendChild(div);
+                
+                nominalGrid.appendChild(div);
+            }
         });
 
-        // Reset nominal setiap pindah tab provider
-        selectedNominal = null;
-        selectedPrice = null;
+        if (count === 0) {
+            emptyState.style.display = 'block';
+        } else {
+            emptyState.style.display = 'none';
+        }
+
         updateSummary();
     }
 
@@ -243,8 +268,14 @@
         chip.addEventListener('click', function () {
             providerChips.forEach(function (c) { c.classList.remove('active'); });
             chip.classList.add('active');
-            selectedProvider = chip.innerText; // Simpan teks aslinya (misal: "Telkomsel" atau "XL Axiata")
-            renderPackages(chip.dataset.provider);
+            selectedProvider = chip.innerText;
+            currentProviderKey = chip.dataset.provider;
+            
+            // Reset nominal terpilih setiap kali ganti provider
+            selectedNominal = null;
+            selectedPrice = null;
+            
+            renderPackages();
         });
     });
 
@@ -268,10 +299,12 @@
         }
     }
 
+    // Event Listener Input Pencarian & Nomor HP
+    searchInput.addEventListener('input', renderPackages);
     nomorHpInput.addEventListener('input', updateSummary);
 
     // Initial render untuk default (Telkomsel)
-    renderPackages('Telkomsel');
+    renderPackages();
 
     // Tahun dinamis di footer
     document.getElementById('year').textContent = new Date().getFullYear();
