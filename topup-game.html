@@ -508,7 +508,7 @@
             var pesan = 'Halo AsliApp, saya mau top up game:%0AGame: ' + encodeURIComponent(selectedGame) +
                 '%0AID Akun: ' + encodeURIComponent(idLine) +
                 '%0ANominal: ' + encodeURIComponent(selectedPackage + ' (' + selectedPrice + ')');
-            pesanBtn.href = 'https://wa.me/6288989942301?text=' + pesan;
+            pesanBtn.href = 'https://wa.me/6281217028630?text=' + pesan;
             pesanBtn.removeAttribute('disabled');
         } else {
             pesanBtn.href = '#';
@@ -525,7 +525,10 @@
     renderPackages();
 
     // Tahun dinamis di footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    var yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 </script>
 </body>
 </html>
