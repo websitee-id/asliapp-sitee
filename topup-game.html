@@ -39,6 +39,10 @@
                 <p>Top up diamond, UC, dan voucher game</p>
                 <h2>Top Up Game</h2>
             </div>
+            <div class="search-pill">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Cari nominal/item game (contoh: 100)...">
+            </div>
         </div>
 
         <div class="section-head">
@@ -102,8 +106,13 @@
                 <h3>3. Pilih nominal top up</h3>
             </div>
         </div>
+        
         <div class="package-grid" id="packageGrid">
-            <!-- populated by JS based on selected game -->
+            <!-- populated by JS based on selected game & search filter -->
+        </div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Nominal tidak ditemukan. Coba ketik angka atau nama paket lain.
         </div>
 
         <div class="order-summary">
@@ -427,16 +436,29 @@
     var userIdInput = document.getElementById('userId');
     var serverIdInput = document.getElementById('serverId');
     var serverIdGroup = document.getElementById('serverIdGroup');
+    var searchInput = document.getElementById('searchInput');
+    var emptyState = document.getElementById('emptyState');
 
     function renderPackages() {
         packageGrid.innerHTML = '';
-        if (packages[selectedGame]) {
-            packages[selectedGame].forEach(function (pkg) {
+        var query = searchInput.value.toLowerCase().trim();
+        var pkgList = packages[selectedGame] || [];
+        var count = 0;
+
+        pkgList.forEach(function (pkg) {
+            var isMatch = pkg.name.toLowerCase().includes(query) || pkg.name.replaceAll('.', '').includes(query);
+
+            if (isMatch) {
+                count++;
                 var card = document.createElement('div');
                 card.className = 'package-card';
+                if (selectedPackage === pkg.name) {
+                    card.classList.add('selected');
+                }
                 card.dataset.name = pkg.name;
                 card.dataset.price = pkg.price;
                 card.innerHTML = '<div class="pkg-name">' + pkg.name + '</div><div class="pkg-price">' + pkg.price + '</div>';
+                
                 card.addEventListener('click', function () {
                     document.querySelectorAll('#packageGrid .package-card').forEach(function (c) { c.classList.remove('selected'); });
                     card.classList.add('selected');
@@ -445,10 +467,15 @@
                     updateSummary();
                 });
                 packageGrid.appendChild(card);
-            });
+            }
+        });
+
+        if (count === 0) {
+            emptyState.style.display = 'block';
+        } else {
+            emptyState.style.display = 'none';
         }
-        selectedPackage = null;
-        selectedPrice = null;
+
         serverIdGroup.style.display = noServerGames.indexOf(selectedGame) !== -1 ? 'none' : 'block';
         updateSummary();
     }
@@ -458,6 +485,8 @@
             gameCards.forEach(function (c) { c.classList.remove('selected'); });
             card.classList.add('selected');
             selectedGame = card.dataset.game;
+            selectedPackage = null;
+            selectedPrice = null;
             renderPackages();
         });
     });
@@ -487,10 +516,16 @@
         }
     }
 
+    // Event Listener
+    searchInput.addEventListener('input', renderPackages);
     userIdInput.addEventListener('input', updateSummary);
     serverIdInput.addEventListener('input', updateSummary);
 
+    // Initial render
     renderPackages();
+
+    // Tahun dinamis di footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
