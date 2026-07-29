@@ -937,7 +937,7 @@
 <script src="assets/script.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var adminPhone = "6288989942301";
+        var adminPhone = "6281217028630";
 
         function updateCardLink(card) {
             var appName = card.querySelector("h4").textContent.trim();
@@ -966,6 +966,11 @@
                 });
             }
         });
+
+        var yearEl = document.getElementById("year");
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
     });
 </script>
 </body>
